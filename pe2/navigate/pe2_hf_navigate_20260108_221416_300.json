@@ -1,0 +1,1736 @@
+{
+  "timestamp": "2026-01-08T22:14:16.190279",
+  "dataset": {
+    "hf_dataset": "tasksource/bigbench",
+    "hf_task_name": "navigate",
+    "train_split": "train",
+    "dev_split": "dev",
+    "test_split": "validation",
+    "train_size": 150,
+    "dev_size": 150,
+    "test_size": 200
+  },
+  "config": {
+    "initial_prompt": "You MUST answer with exactly one string: either \"True\" or \"False\". Do not output explanations, punctuation, or additional text. \"True\" = you return to the starting point. \"False\" = you do not return to the starting point.\n\nNow answer the following question with \"True\" or \"False\":",
+    "meta_prompt_template_snippet": "We are refining a prompt for a classification task.\n\n# Current Prompt\n{prompt}\n\n# Failed Examples\nThe following examples are cases where the model failed (wrong judgement):\n\n{examples}\n\n# Instructions\n1. Analyze why the current prompt might have led to these mistakes.\n2. Propose an improved version of the prompt that:\n  - stays concise,\n  - keeps the same task and output format,\n  - reduces the li",
+    "task_model": "gpt-4o-mini",
+    "proposal_model": "gpt-4o-mini",
+    "iterations": 3,
+    "beam_width": 2,
+    "proposals_per_prompt": 2,
+    "failure_batch_size": 5,
+    "train_max": 150,
+    "dev_max": 150,
+    "test_max": 200
+  },
+  "result": {
+    "best_prompt": "You MUST answer with exactly one string: either \"True\" or \"False\". Do not output explanations, punctuation, or additional text. \"True\" = you return to the starting point. \"False\" = you do not return to the starting point.\n\nNow answer the following question with \"True\" or \"False\":",
+    "best_accuracy": 0.66,
+    "history": [
+      {
+        "iteration": 0,
+        "prompt": "You MUST answer with exactly one string: either \"True\" or \"False\". Do not output explanations, punctuation, or additional text. \"True\" = you return to the starting point. \"False\" = you do not return to the starting point.\n\nNow answer the following question with \"True\" or \"False\":",
+        "dev_accuracy": 0.66
+      },
+      {
+        "iteration": 1,
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. Do not output explanations, punctuation, or additional text. 'True' means you return to the starting point after following the instructions. 'False' means you do not return to the starting point. Carefully track your movements based on the instructions provided. Now answer the following question with 'True' or 'False':",
+        "dev_accuracy": 0.6466666666666666
+      },
+      {
+        "iteration": 1,
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. Do not output explanations, punctuation, or additional text. 'True' means you return to the starting point after following the instructions. 'False' means you do not return to the starting point. Carefully track the net movement and direction changes. Now answer the following question with 'True' or 'False':",
+        "dev_accuracy": 0.6466666666666666
+      },
+      {
+        "iteration": 2,
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. Do not output explanations, punctuation, or additional text. 'True' means the final position is the same as the starting point after following the instructions. 'False' means the final position is different from the starting point. Now answer the following question with 'True' or 'False':",
+        "dev_accuracy": 0.6533333333333333
+      },
+      {
+        "iteration": 2,
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. Do not output explanations, punctuation, or additional text. 'True' means you return to the starting point after following the instructions. 'False' means you do not return to the starting point. Calculate the net movement based on the following instructions and answer the question: Do you return to the starting point?",
+        "dev_accuracy": 0.6533333333333333
+      },
+      {
+        "iteration": 2,
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. 'True' means you return to the starting point after following the instructions. 'False' means you do not return to the starting point. Carefully track each step based on the following instructions. Now answer the question: Do you return to the starting point? Q:",
+        "dev_accuracy": 0.6266666666666667
+      },
+      {
+        "iteration": 2,
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. 'True' means you return to the starting point after following the instructions. 'False' means you do not return to the starting point. Carefully follow these movements: Now answer the question with 'True' or 'False':",
+        "dev_accuracy": 0.6333333333333333
+      },
+      {
+        "iteration": 3,
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. 'True' means you end up at the starting point after following the instructions. 'False' means you do not end up at the starting point. Now answer the following question with 'True' or 'False':",
+        "dev_accuracy": 0.6466666666666666
+      },
+      {
+        "iteration": 3,
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. Do not output explanations, punctuation, or additional text. 'True' means you return to the starting point after following the instructions. 'False' means you do not return to the starting point. Calculate the net movement based on the instructions provided. Now answer the following question with 'True' or 'False':",
+        "dev_accuracy": 0.66
+      },
+      {
+        "iteration": 3,
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. Do not output explanations, punctuation, or additional text. 'True' means you end up at the starting point after all movements. 'False' means you do not. Now answer the following question with 'True' or 'False':",
+        "dev_accuracy": 0.6466666666666666
+      },
+      {
+        "iteration": 3,
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. Do not output explanations, punctuation, or additional text. 'True' means the final position is the same as the starting point after following all instructions. 'False' means the final position is different from the starting point. Carefully calculate the net effect of all movements. Now answer the following question with 'True' or 'False':",
+        "dev_accuracy": 0.6466666666666666
+      }
+    ],
+    "all_candidates": [
+      {
+        "prompt": "You MUST answer with exactly one string: either \"True\" or \"False\". Do not output explanations, punctuation, or additional text. \"True\" = you return to the starting point. \"False\" = you do not return to the starting point.\n\nNow answer the following question with \"True\" or \"False\":",
+        "dev_accuracy": 0.66
+      },
+      {
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. Do not output explanations, punctuation, or additional text. 'True' means you return to the starting point after following the instructions. 'False' means you do not return to the starting point. Calculate the net movement based on the instructions provided. Now answer the following question with 'True' or 'False':",
+        "dev_accuracy": 0.66
+      },
+      {
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. Do not output explanations, punctuation, or additional text. 'True' means the final position is the same as the starting point after following the instructions. 'False' means the final position is different from the starting point. Now answer the following question with 'True' or 'False':",
+        "dev_accuracy": 0.6533333333333333
+      },
+      {
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. Do not output explanations, punctuation, or additional text. 'True' means you return to the starting point after following the instructions. 'False' means you do not return to the starting point. Calculate the net movement based on the following instructions and answer the question: Do you return to the starting point?",
+        "dev_accuracy": 0.6533333333333333
+      },
+      {
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. Do not output explanations, punctuation, or additional text. 'True' means you return to the starting point after following the instructions. 'False' means you do not return to the starting point. Carefully track your movements based on the instructions provided. Now answer the following question with 'True' or 'False':",
+        "dev_accuracy": 0.6466666666666666
+      },
+      {
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. Do not output explanations, punctuation, or additional text. 'True' means you return to the starting point after following the instructions. 'False' means you do not return to the starting point. Carefully track the net movement and direction changes. Now answer the following question with 'True' or 'False':",
+        "dev_accuracy": 0.6466666666666666
+      },
+      {
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. 'True' means you end up at the starting point after following the instructions. 'False' means you do not end up at the starting point. Now answer the following question with 'True' or 'False':",
+        "dev_accuracy": 0.6466666666666666
+      },
+      {
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. Do not output explanations, punctuation, or additional text. 'True' means you end up at the starting point after all movements. 'False' means you do not. Now answer the following question with 'True' or 'False':",
+        "dev_accuracy": 0.6466666666666666
+      },
+      {
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. Do not output explanations, punctuation, or additional text. 'True' means the final position is the same as the starting point after following all instructions. 'False' means the final position is different from the starting point. Carefully calculate the net effect of all movements. Now answer the following question with 'True' or 'False':",
+        "dev_accuracy": 0.6466666666666666
+      },
+      {
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. 'True' means you return to the starting point after following the instructions. 'False' means you do not return to the starting point. Carefully follow these movements: Now answer the question with 'True' or 'False':",
+        "dev_accuracy": 0.6333333333333333
+      },
+      {
+        "prompt": "You MUST answer with exactly one string: either 'True' or 'False'. 'True' means you return to the starting point after following the instructions. 'False' means you do not return to the starting point. Carefully track each step based on the following instructions. Now answer the question: Do you return to the starting point? Q:",
+        "dev_accuracy": 0.6266666666666667
+      }
+    ],
+    "test_accuracy": 0.66,
+    "test_results": [
+      {
+        "Index": 0,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps backward. Take 3 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 1,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 4 steps. Take 7 steps. Turn around. Take 7 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": false
+      },
+      {
+        "Index": 2,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps backward. Take 4 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 3,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Take 2 steps. Turn around. Take 8 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": false
+      },
+      {
+        "Index": 4,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps backward. Take 1 step forward. Take 1 step forward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 5,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Turn around. Take 2 steps. Take 8 steps. Turn right.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 6,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps left. Take 4 steps right.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 7,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps backward. Take 7 steps backward. Take 8 steps forward. Take 10 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 8,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps forward. Take 8 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 9,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Turn right. Take 4 steps. Turn around. Take 1 step. Take 2 steps. Take 1 step.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 10,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Turn left. Take 6 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": false
+      },
+      {
+        "Index": 11,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Take 3 steps. Take 4 steps. Turn around. Take 6 steps. Take 6 steps. Take 3 steps. Turn left.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 12,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps left. Take 3 steps right. Take 4 steps right. Take 9 steps right. Take 10 steps left.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 13,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 2 steps. Turn around. Take 10 steps. Take 2 steps. Turn left. Turn left. Take 10 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 14,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps left. Take 4 steps backward. Take 7 steps left. Take 8 steps right. Take 5 steps forward. Take 1 step left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 15,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 5 steps. Turn right. Take 5 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 16,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Take 7 steps. Turn around.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 17,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Turn around. Take 8 steps. Turn left. Turn right.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 18,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps backward. Take 9 steps right. Take 5 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 19,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps left. Take 2 steps right. Take 9 steps right. Take 3 steps forward. Take 9 steps left. Take 2 steps right. Take 3 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 20,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Turn left. Turn left. Take 3 steps. Take 2 steps. Take 8 steps. Turn around. Take 7 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 21,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 5 steps. Take 7 steps. Take 4 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 22,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 5 steps. Turn around. Take 1 step. Take 10 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 23,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps left. Take 7 steps backward. Take 10 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 24,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps right. Take 2 steps right. Take 5 steps left.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 25,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Take 9 steps. Turn around. Take 6 steps. Take 2 steps. Take 9 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 26,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Turn left. Turn around. Turn right. Take 4 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 27,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 3 steps. Take 5 steps. Turn around.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": false
+      },
+      {
+        "Index": 28,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps right. Take 8 steps left. Take 3 steps left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 29,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step left. Take 4 steps backward. Take 8 steps forward. Take 6 steps backward. Take 10 steps right. Take 2 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 30,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps backward. Take 3 steps forward. Take 7 steps forward. Take 6 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 31,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Take 1 step. Turn around. Take 3 steps. Turn right. Turn left. Take 6 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 32,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps left. Take 9 steps backward. Take 3 steps forward. Take 1 step forward. Take 3 steps left. Take 5 steps forward. Take 8 steps left. Take 1 step right. Take 6 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 33,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 1 step. Take 9 steps. Take 8 steps. Take 2 steps. Take 5 steps. Take 5 steps. Turn right. Take 9 steps. Take 6 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 34,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Take 3 steps. Turn around. Take 6 steps. Take 1 step. Take 1 step. Turn around.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 35,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps backward. Take 8 steps backward. Take 4 steps forward. Take 10 steps right. Take 2 steps right. Take 3 steps left. Take 10 steps right. Take 3 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 36,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 3 steps. Turn around. Take 2 steps. Take 1 step.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 37,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Turn around. Take 5 steps. Turn left. Turn around.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 38,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps right. Take 10 steps left. Take 3 steps left. Take 1 step forward. Take 4 steps left. Take 10 steps left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 39,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps left. Take 5 steps left. Take 8 steps right. Take 6 steps right.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 40,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps left. Take 2 steps backward. Take 4 steps right. Take 5 steps left. Take 5 steps right.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 41,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Turn around. Take 3 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 42,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Turn right. Take 8 steps. Turn right. Turn right. Take 8 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 43,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps backward. Take 7 steps backward. Take 1 step right. Take 7 steps right. Take 10 steps forward. Take 1 step right. Take 10 steps right. Take 1 step backward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 44,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 8 steps. Turn around. Take 8 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 45,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 3 steps. Turn around. Take 3 steps. Turn right.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 46,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Take 3 steps. Turn right.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 47,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps left. Take 6 steps left. Take 3 steps left. Take 2 steps backward. Take 9 steps right. Take 6 steps left. Take 10 steps forward. Take 6 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 48,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps right. Take 10 steps left. Take 4 steps right.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 49,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Turn around. Take 6 steps. Take 2 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 50,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps backward. Take 7 steps left. Take 2 steps forward. Take 8 steps right. Take 2 steps backward. Take 4 steps right. Take 3 steps forward. Take 5 steps left.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 51,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Turn around. Take 9 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 52,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps left. Take 5 steps left. Take 6 steps forward. Take 9 steps right.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 53,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps right. Take 9 steps right. Take 2 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 54,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps forward. Take 4 steps backward. Take 2 steps backward. Take 2 steps right. Take 1 step forward. Take 4 steps right. Take 6 steps backward. Take 7 steps right.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 55,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Turn around. Turn around. Turn around. Take 4 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 56,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps right. Take 9 steps right. Take 7 steps forward. Take 4 steps backward. Take 9 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 57,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Turn left. Take 8 steps. Take 6 steps. Take 6 steps. Turn around. Turn left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 58,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps backward. Take 3 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": false
+      },
+      {
+        "Index": 59,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 10 steps. Take 1 step.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 60,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps left. Take 6 steps left. Take 10 steps forward. Take 6 steps left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 61,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps left. Take 6 steps right. Take 4 steps forward. Take 10 steps forward. Take 6 steps left. Take 1 step left. Take 10 steps forward. Take 2 steps right.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 62,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Take 4 steps. Turn around. Take 1 step. Take 6 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 63,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Take 2 steps. Take 2 steps. Take 2 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 64,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps forward. Take 1 step forward. Take 2 steps forward. Take 2 steps right. Take 2 steps left. Take 8 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 65,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps left. Take 6 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 66,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Turn around. Turn left. Take 7 steps. Take 4 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 67,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps backward. Take 3 steps backward. Take 1 step forward. Take 4 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 68,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 7 steps. Take 3 steps. Take 2 steps. Take 3 steps. Take 9 steps. Turn around. Take 10 steps. Take 4 steps. Take 10 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 69,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps forward. Take 4 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 70,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps forward. Take 6 steps backward. Take 3 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 71,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 10 steps. Turn around. Take 10 steps. Turn around.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 72,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn around. Take 8 steps. Take 4 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": false
+      },
+      {
+        "Index": 73,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 10 steps. Take 6 steps. Take 4 steps. Take 2 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": false
+      },
+      {
+        "Index": 74,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps forward. Take 2 steps forward. Take 1 step right. Take 4 steps backward. Take 2 steps backward. Take 1 step right. Take 2 steps left.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 75,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 8 steps. Take 6 steps. Take 10 steps. Turn right. Take 6 steps. Turn left. Take 10 steps. Turn left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 76,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps forward. Take 3 steps backward. Take 1 step backward. Take 4 steps left. Take 8 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 77,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps right. Take 10 steps backward. Take 5 steps right. Take 10 steps forward. Take 6 steps right. Take 6 steps backward. Take 6 steps right. Take 4 steps right.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 78,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps left. Take 5 steps right. Take 3 steps right.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 79,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps right. Take 9 steps forward. Take 1 step backward. Take 3 steps right. Take 7 steps right.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 80,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps right. Take 6 steps forward. Take 4 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 81,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps forward. Take 7 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 82,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step right. Take 9 steps forward. Take 10 steps backward. Take 5 steps right. Take 4 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 83,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps forward. Take 8 steps right. Take 3 steps left. Take 1 step forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 84,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps left. Take 7 steps backward. Take 1 step right. Take 5 steps forward. Take 6 steps left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 85,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Take 1 step. Turn around. Take 9 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 86,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 6 steps. Turn left. Turn right. Turn around. Take 6 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 87,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 8 steps. Take 1 step. Turn around. Take 9 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 88,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps backward. Take 5 steps left. Take 4 steps left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 89,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Take 6 steps. Turn around. Take 10 steps. Take 6 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 90,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps backward. Take 8 steps left. Take 4 steps backward. Take 7 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 91,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps left. Take 3 steps right.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 92,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps right. Take 8 steps forward. Take 1 step forward. Take 4 steps left. Take 1 step right. Take 9 steps backward. Take 3 steps left.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 93,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps left. Take 7 steps forward. Take 2 steps backward. Take 2 steps right. Take 4 steps left. Take 5 steps backward. Take 7 steps right.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 94,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 2 steps. Take 7 steps. Turn right. Take 8 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 95,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Turn around. Turn left. Turn right. Turn right. Turn right. Turn around. Take 4 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 96,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Take 5 steps. Turn around. Take 5 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 97,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Take 3 steps. Turn right. Turn left. Turn around. Take 8 steps. Take 5 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 98,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Take 7 steps. Turn right. Take 9 steps. Take 5 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 99,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Take 1 step. Take 3 steps. Take 6 steps. Take 1 step. Turn around.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 100,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps right. Take 7 steps left. Take 4 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 101,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Turn right. Turn right. Take 9 steps. Turn around.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 102,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps backward. Take 8 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 103,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Take 9 steps. Take 6 steps. Take 8 steps. Take 7 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 104,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Turn right. Turn left. Take 3 steps. Turn right. Take 4 steps. Take 5 steps. Take 6 steps. Turn around.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 105,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 1 step. Take 9 steps. Take 5 steps. Take 10 steps. Take 4 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 106,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Turn right. Turn right. Take 9 steps. Turn right. Turn left.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 107,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 5 steps. Turn left. Take 9 steps. Take 5 steps. Take 7 steps. Take 4 steps. Take 3 steps. Take 10 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 108,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps backward. Take 6 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 109,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps forward. Take 2 steps backward. Take 5 steps backward. Take 4 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 110,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Turn around. Take 3 steps. Turn left. Turn left. Take 1 step.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": false
+      },
+      {
+        "Index": 111,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step left. Take 1 step forward. Take 3 steps forward. Take 6 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 112,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps right. Take 9 steps left.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 113,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps backward. Take 6 steps right. Take 4 steps forward. Take 4 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 114,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 8 steps. Turn around. Take 8 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 115,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps backward. Take 6 steps left. Take 2 steps right. Take 4 steps left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 116,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps left. Take 7 steps left. Take 3 steps left. Take 3 steps right. Take 3 steps forward. Take 6 steps left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 117,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Take 9 steps. Turn left. Take 7 steps. Take 8 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 118,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps right. Take 3 steps right.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 119,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Turn around. Take 7 steps. Take 10 steps. Take 1 step.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 120,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn around. Take 3 steps. Turn around. Take 3 steps. Take 7 steps. Turn around. Take 7 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 121,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 1 step. Take 7 steps. Take 9 steps. Take 5 steps. Turn left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 122,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps left. Take 7 steps left. Take 4 steps left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 123,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 3 steps. Take 7 steps. Take 4 steps. Take 9 steps. Turn around. Take 9 steps. Take 9 steps. Take 5 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 124,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Turn around. Take 6 steps. Turn left.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 125,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps backward. Take 9 steps forward. Take 4 steps right.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 126,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Turn left. Turn around. Turn right. Take 4 steps. Turn left.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 127,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 1 step. Turn around. Take 7 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 128,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 10 steps. Take 7 steps. Turn around. Turn right.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 129,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps backward. Take 4 steps right. Take 7 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": false
+      },
+      {
+        "Index": 130,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps forward. Take 1 step right. Take 4 steps backward. Take 9 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 131,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 6 steps. Turn around.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": false
+      },
+      {
+        "Index": 132,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps forward. Take 2 steps backward. Take 3 steps right. Take 7 steps forward. Take 9 steps right.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 133,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps right. Take 4 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 134,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps right. Take 4 steps right. Take 2 steps forward. Take 3 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 135,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps left. Take 7 steps forward. Take 5 steps left. Take 1 step left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 136,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Turn around. Take 8 steps. Take 9 steps. Turn around. Take 8 steps. Take 3 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 137,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Turn around. Take 9 steps. Turn left.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 138,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Take 8 steps. Turn around. Turn left. Turn left. Turn around. Take 6 steps. Take 6 steps. Turn left.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 139,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Take 9 steps. Turn around. Take 5 steps. Take 4 steps. Turn right.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 140,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps forward. Take 1 step backward. Take 3 steps left. Take 3 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 141,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 4 steps. Take 8 steps. Turn around. Take 2 steps. Take 7 steps. Take 8 steps. Take 1 step.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 142,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps right. Take 8 steps forward. Take 7 steps left. Take 5 steps backward. Take 4 steps forward. Take 7 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 143,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps left. Take 7 steps right. Take 1 step left. Take 8 steps left. Take 4 steps backward. Take 7 steps left. Take 8 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 144,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 8 steps. Take 10 steps. Turn left. Turn left. Take 9 steps. Take 3 steps. Take 1 step. Take 5 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 145,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Turn right. Take 7 steps. Turn right. Turn right. Take 7 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 146,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps forward. Take 9 steps left. Take 6 steps left. Take 6 steps right. Take 1 step right. Take 3 steps left. Take 4 steps left. Take 8 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 147,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 4 steps. Take 8 steps. Turn around. Take 7 steps. Take 2 steps. Take 3 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 148,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 1 step. Take 6 steps. Turn left. Take 4 steps. Take 4 steps. Turn around. Take 4 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 149,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Take 7 steps. Turn around. Take 9 steps. Take 6 steps. Turn right.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 150,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 7 steps. Take 10 steps. Take 6 steps. Turn around. Take 8 steps. Take 3 steps. Take 10 steps. Take 8 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 151,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 7 steps. Take 3 steps. Take 5 steps. Take 6 steps. Take 5 steps. Take 1 step. Turn right. Turn right. Take 10 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 152,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn right. Take 8 steps. Turn right. Turn right. Take 1 step. Take 7 steps. Turn right.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 153,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Take 2 steps. Turn left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 154,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step forward. Take 5 steps backward. Take 4 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 155,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps right. Take 5 steps right. Take 8 steps left.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 156,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps forward. Take 3 steps right. Take 3 steps backward. Take 8 steps forward. Take 7 steps left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 157,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step backward. Take 7 steps forward. Take 1 step left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 158,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps forward. Take 2 steps forward. Take 5 steps backward. Take 7 steps backward. Take 7 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 159,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Turn around. Take 6 steps. Take 3 steps. Turn right. Take 7 steps. Take 10 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 160,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 7 steps. Take 10 steps. Take 9 steps. Take 2 steps. Turn around.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 161,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps left. Take 5 steps right. Take 6 steps left. Take 5 steps forward. Take 1 step forward. Take 9 steps left. Take 9 steps right. Take 3 steps right. Take 6 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 162,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 6 steps. Turn right. Turn right.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 163,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 5 steps. Take 1 step. Take 10 steps. Take 2 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 164,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps left. Take 7 steps right.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 165,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Turn right. Turn left. Take 5 steps. Turn around. Take 5 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 166,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps left. Take 10 steps forward. Take 1 step forward. Take 10 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 167,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps left. Take 1 step backward. Take 5 steps forward. Take 10 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 168,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Turn left. Take 6 steps. Take 4 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 169,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Take 10 steps. Take 6 steps. Turn left. Take 5 steps. Take 2 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 170,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps right. Take 3 steps right. Take 1 step right. Take 10 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 171,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 8 steps. Take 6 steps. Turn left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 172,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Turn around. Take 2 steps. Take 2 steps. Turn left.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 173,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Take 5 steps. Turn left. Turn left. Take 7 steps. Take 1 step. Turn right.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 174,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Turn around. Turn around. Turn around. Take 6 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 175,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps backward. Take 5 steps right. Take 6 steps backward. Take 2 steps backward. Take 6 steps forward. Take 8 steps right.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 176,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps forward. Take 9 steps backward. Take 7 steps forward. Take 8 steps backward. Take 10 steps forward. Take 5 steps backward. Take 2 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 177,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps backward. Take 8 steps backward. Take 10 steps left. Take 5 steps left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 178,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps left. Take 8 steps left. Take 4 steps right.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": false
+      },
+      {
+        "Index": 179,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 8 steps. Take 1 step. Take 10 steps. Take 8 steps. Turn right. Take 7 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 180,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 6 steps. Take 1 step. Turn around. Turn around. Turn around. Take 7 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 181,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps right. Take 7 steps forward. Take 8 steps left. Take 7 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 182,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step left. Take 3 steps left. Take 5 steps left. Take 9 steps right.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 183,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps right. Take 6 steps backward. Take 5 steps left. Take 3 steps forward. Take 3 steps left. Take 1 step right. Take 3 steps forward. Take 9 steps right. Take 6 steps left.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 184,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps forward. Take 10 steps left. Take 5 steps right.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 185,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps left. Take 9 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 186,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Turn right. Take 3 steps. Take 9 steps. Take 7 steps. Take 2 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 187,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps right. Take 8 steps forward. Take 7 steps right. Take 4 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 188,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps right. Take 5 steps right. Take 7 steps forward. Take 6 steps left. Take 3 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 189,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Turn around. Take 2 steps. Take 6 steps. Take 2 steps. Take 3 steps. Turn right. Turn right. Take 4 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 190,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 9 steps. Take 2 steps. Take 6 steps. Turn right. Turn left. Take 1 step. Take 9 steps. Take 8 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 191,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps left. Take 6 steps forward. Take 9 steps backward. Take 8 steps backward. Take 3 steps left.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 192,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 9 steps. Turn around. Take 9 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "True",
+        "MtaskAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 193,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 6 steps. Take 2 steps. Turn around. Take 1 step. Take 7 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 194,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 9 steps. Turn around. Take 6 steps. Take 3 steps. Turn left.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 195,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps forward. Take 9 steps backward. Take 8 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 196,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 10 steps. Take 6 steps. Take 2 steps. Turn around. Take 4 steps. Take 2 steps. Take 3 steps. Take 9 steps.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 197,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn around. Turn left. Take 7 steps. Take 2 steps. Take 4 steps. Take 8 steps.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 198,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 1 step. Take 6 steps. Turn around. Take 6 steps. Take 9 steps. Take 1 step.\nA:",
+        "correctAnswer": "False",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 199,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps right. Take 9 steps left. Take 7 steps right.\nA:",
+        "correctAnswer": "True",
+        "MtaskAnswer": "False",
+        "MtaskAnswerRaw": "False",
+        "judgement": false
+      }
+    ]
+  }
+}

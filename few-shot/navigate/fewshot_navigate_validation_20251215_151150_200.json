@@ -1,0 +1,1627 @@
+{
+  "timestamp": "2025-12-15T15:11:50.536102",
+  "dataset": {
+    "path": "tasksource/bigbench:navigate[validation]",
+    "num_examples": 200,
+    "few_shot_examples": 200
+  },
+  "config": {
+    "base_system_prompt": "You MUST answer with exactly one string: either \"True\" or \"False\". Do not output explanations, punctuation, or additional text. \"True\" = you return to the starting point. \"False\" = you do not return to the starting point.\n\nNow answer the following question with \"True\" or \"False\":",
+    "model_name": "gpt-4o-mini",
+    "mode": "few-shot",
+    "hf_dataset": "tasksource/bigbench",
+    "hf_task_name": "navigate",
+    "train_split": "train",
+    "test_split": "validation",
+    "used_train_examples": 200,
+    "used_test_examples": 200,
+    "few_shot_context_examples": 200
+  },
+  "result": {
+    "mode": "few-shot",
+    "prompt": "You MUST answer with exactly one string: either \"True\" or \"False\". Do not output explanations, punctuation, or additional text. \"True\" = you return to the starting point. \"False\" = you do not return to the starting point.\n\nNow answer the following question with \"True\" or \"False\":\n\nAdditionally I am giving you the following examples to learn from:\n\nExample 1:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step backward. Take 9 steps left. Take 2 steps backward. Take 6 steps forward. Take 4 steps forward. Take 4 steps backward. Take 3 steps right.\nA:\nAnswer: False\n\nExample 2:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps left. Take 10 steps forward. Take 7 steps forward. Take 2 steps forward.\nA:\nAnswer: False\n\nExample 3:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 1 step. Take 10 steps. Take 4 steps. Take 1 step. Take 10 steps. Turn right. Turn around.\nA:\nAnswer: False\n\nExample 4:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step right. Take 3 steps left. Take 2 steps right.\nA:\nAnswer: True\n\nExample 5:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps backward. Take 7 steps backward. Take 8 steps right. Take 6 steps right. Take 3 steps left.\nA:\nAnswer: False\n\nExample 6:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Turn around. Take 8 steps.\nA:\nAnswer: True\n\nExample 7:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps right. Take 1 step forward. Take 10 steps left. Take 8 steps forward. Take 9 steps backward. Take 4 steps right.\nA:\nAnswer: True\n\nExample 8:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps forward. Take 7 steps backward. Take 7 steps backward. Take 8 steps forward.\nA:\nAnswer: True\n\nExample 9:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Take 4 steps. Take 3 steps.\nA:\nAnswer: False\n\nExample 10:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps backward. Take 9 steps forward. Take 4 steps forward. Take 2 steps left. Take 4 steps forward. Take 6 steps forward. Take 10 steps backward. Take 8 steps right. Take 1 step left.\nA:\nAnswer: False\n\nExample 11:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Take 5 steps. Take 5 steps. Take 10 steps. Take 5 steps.\nA:\nAnswer: False\n\nExample 12:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Take 6 steps. Take 8 steps. Take 5 steps. Take 6 steps. Take 2 steps. Take 1 step. Take 2 steps.\nA:\nAnswer: False\n\nExample 13:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Turn around. Take 3 steps. Turn right.\nA:\nAnswer: True\n\nExample 14:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps backward. Take 2 steps left. Take 5 steps right. Take 3 steps left. Take 5 steps backward. Take 10 steps forward.\nA:\nAnswer: True\n\nExample 15:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps left. Take 10 steps right. Take 7 steps left.\nA:\nAnswer: True\n\nExample 16:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn right. Turn around. Turn left. Take 4 steps. Turn left. Turn around. Take 3 steps.\nA:\nAnswer: False\n\nExample 17:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps forward. Take 1 step backward. Take 4 steps backward. Take 4 steps backward.\nA:\nAnswer: True\n\nExample 18:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Turn around. Take 5 steps. Turn right. Turn right. Take 1 step. Take 1 step.\nA:\nAnswer: True\n\nExample 19:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Take 6 steps. Take 9 steps.\nA:\nAnswer: False\n\nExample 20:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Turn left. Take 9 steps. Take 7 steps. Turn around.\nA:\nAnswer: False\n\nExample 21:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps backward. Take 6 steps forward. Take 6 steps right.\nA:\nAnswer: False\n\nExample 22:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Take 2 steps. Turn around. Take 6 steps.\nA:\nAnswer: True\n\nExample 23:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step forward. Take 10 steps left. Take 4 steps forward.\nA:\nAnswer: False\n\nExample 24:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 7 steps. Turn right. Turn right. Take 6 steps. Turn right.\nA:\nAnswer: False\n\nExample 25:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps backward. Take 8 steps backward.\nA:\nAnswer: False\n\nExample 26:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Take 6 steps. Take 9 steps. Take 6 steps. Take 2 steps. Turn left. Take 6 steps. Turn around. Take 8 steps.\nA:\nAnswer: False\n\nExample 27:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Turn around. Take 4 steps. Take 6 steps. Turn around.\nA:\nAnswer: True\n\nExample 28:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps forward. Take 5 steps backward. Take 5 steps left. Take 5 steps forward.\nA:\nAnswer: False\n\nExample 29:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 5 steps. Turn around. Turn right.\nA:\nAnswer: False\n\nExample 30:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps forward. Take 7 steps backward. Take 10 steps backward.\nA:\nAnswer: False\n\nExample 31:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 7 steps. Take 7 steps. Take 10 steps. Take 1 step. Turn left. Take 7 steps.\nA:\nAnswer: False\n\nExample 32:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps forward. Take 5 steps right. Take 7 steps left.\nA:\nAnswer: False\n\nExample 33:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Turn left. Turn left. Take 10 steps.\nA:\nAnswer: True\n\nExample 34:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Take 5 steps. Take 8 steps. Turn right. Turn right. Take 5 steps. Turn around. Take 2 steps. Take 4 steps.\nA:\nAnswer: False\n\nExample 35:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 7 steps. Take 8 steps. Turn right. Turn right. Take 1 step. Take 7 steps. Take 6 steps. Take 1 step.\nA:\nAnswer: True\n\nExample 36:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps forward. Take 4 steps backward. Take 4 steps backward. Take 5 steps forward. Take 7 steps forward. Take 10 steps backward. Take 1 step backward.\nA:\nAnswer: True\n\nExample 37:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps forward. Take 7 steps left. Take 5 steps backward. Take 4 steps right. Take 3 steps right. Take 4 steps backward.\nA:\nAnswer: True\n\nExample 38:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps right. Take 5 steps right. Take 7 steps left. Take 3 steps left. Take 7 steps left. Take 6 steps right.\nA:\nAnswer: True\n\nExample 39:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 1 step. Take 5 steps. Turn around. Turn around. Turn around. Take 6 steps.\nA:\nAnswer: True\n\nExample 40:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps forward. Take 2 steps backward.\nA:\nAnswer: True\n\nExample 41:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps left. Take 6 steps right. Take 10 steps right. Take 2 steps left. Take 5 steps left. Take 1 step left.\nA:\nAnswer: True\n\nExample 42:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 10 steps. Take 10 steps. Take 1 step. Take 7 steps. Take 5 steps. Turn around.\nA:\nAnswer: False\n\nExample 43:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps left. Take 2 steps backward. Take 7 steps backward. Take 7 steps backward. Take 3 steps forward.\nA:\nAnswer: False\n\nExample 44:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 8 steps. Take 7 steps. Turn around. Take 6 steps.\nA:\nAnswer: False\n\nExample 45:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps forward. Take 7 steps backward. Take 10 steps backward. Take 10 steps forward.\nA:\nAnswer: True\n\nExample 46:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 9 steps. Turn around. Take 9 steps. Turn right.\nA:\nAnswer: True\n\nExample 47:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 9 steps. Take 10 steps. Turn left. Take 10 steps. Turn right. Turn around. Take 4 steps.\nA:\nAnswer: False\n\nExample 48:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn around. Take 1 step. Take 10 steps. Turn around. Take 7 steps. Take 4 steps.\nA:\nAnswer: True\n\nExample 49:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps right. Take 4 steps right. Take 6 steps left.\nA:\nAnswer: True\n\nExample 50:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps right. Take 1 step forward. Take 3 steps left. Take 2 steps left.\nA:\nAnswer: False\n\nExample 51:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Take 7 steps. Turn around. Take 8 steps. Take 9 steps.\nA:\nAnswer: True\n\nExample 52:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps right. Take 2 steps right. Take 4 steps left.\nA:\nAnswer: True\n\nExample 53:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps left. Take 7 steps forward. Take 8 steps left. Take 7 steps left. Take 6 steps forward. Take 1 step forward. Take 4 steps forward.\nA:\nAnswer: False\n\nExample 54:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Take 5 steps. Take 2 steps. Take 10 steps. Turn right. Take 10 steps. Take 8 steps.\nA:\nAnswer: False\n\nExample 55:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 3 steps. Turn around. Take 3 steps. Turn left.\nA:\nAnswer: True\n\nExample 56:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps left. Take 4 steps backward.\nA:\nAnswer: False\n\nExample 57:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Turn left. Turn left. Take 5 steps. Take 4 steps. Turn left. Turn left.\nA:\nAnswer: True\n\nExample 58:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Take 2 steps. Take 7 steps.\nA:\nAnswer: False\n\nExample 59:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Take 1 step. Take 8 steps. Turn right.\nA:\nAnswer: False\n\nExample 60:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps left. Take 5 steps left. Take 10 steps right.\nA:\nAnswer: True\n\nExample 61:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 2 steps. Take 6 steps.\nA:\nAnswer: False\n\nExample 62:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps forward. Take 10 steps right. Take 10 steps backward. Take 3 steps forward. Take 7 steps forward. Take 9 steps left.\nA:\nAnswer: False\n\nExample 63:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps left. Take 8 steps left. Take 1 step left. Take 9 steps left. Take 10 steps forward. Take 5 steps forward.\nA:\nAnswer: False\n\nExample 64:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step right. Take 9 steps left. Take 9 steps right. Take 1 step backward. Take 3 steps right. Take 6 steps backward.\nA:\nAnswer: False\n\nExample 65:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 4 steps. Turn around. Take 4 steps.\nA:\nAnswer: True\n\nExample 66:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps forward. Take 3 steps backward. Take 4 steps backward.\nA:\nAnswer: True\n\nExample 67:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Turn around. Take 10 steps. Turn right. Take 10 steps.\nA:\nAnswer: False\n\nExample 68:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step right. Take 4 steps right. Take 5 steps left.\nA:\nAnswer: True\n\nExample 69:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Turn left. Turn left. Turn around. Take 5 steps. Turn around. Take 5 steps.\nA:\nAnswer: False\n\nExample 70:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps forward. Take 4 steps backward. Take 6 steps forward.\nA:\nAnswer: False\n\nExample 71:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps backward. Take 2 steps backward. Take 10 steps forward.\nA:\nAnswer: True\n\nExample 72:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps forward. Take 2 steps backward. Take 4 steps backward.\nA:\nAnswer: True\n\nExample 73:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Take 5 steps. Take 2 steps. Turn around. Take 8 steps. Take 4 steps.\nA:\nAnswer: True\n\nExample 74:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps forward. Take 2 steps backward. Take 10 steps backward.\nA:\nAnswer: False\n\nExample 75:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps left. Take 7 steps forward. Take 9 steps right. Take 7 steps left. Take 7 steps backward. Take 8 steps right. Take 10 steps left. Take 1 step backward. Take 1 step forward.\nA:\nAnswer: False\n\nExample 76:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps backward. Take 2 steps forward. Take 1 step backward. Take 8 steps forward.\nA:\nAnswer: True\n\nExample 77:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 1 step. Take 5 steps. Take 1 step. Take 6 steps. Turn left. Take 7 steps. Take 2 steps. Take 4 steps.\nA:\nAnswer: False\n\nExample 78:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step backward. Take 5 steps right. Take 3 steps left. Take 1 step backward. Take 5 steps backward. Take 4 steps forward. Take 3 steps forward. Take 2 steps left.\nA:\nAnswer: True\n\nExample 79:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps right. Take 8 steps backward. Take 1 step right. Take 7 steps backward.\nA:\nAnswer: False\n\nExample 80:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps forward. Take 4 steps forward. Take 7 steps backward. Take 7 steps backward.\nA:\nAnswer: True\n\nExample 81:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn around. Turn left. Take 1 step. Take 2 steps. Turn around. Turn around. Turn around. Take 3 steps.\nA:\nAnswer: True\n\nExample 82:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps forward. Take 9 steps right. Take 2 steps forward. Take 10 steps backward. Take 9 steps left.\nA:\nAnswer: True\n\nExample 83:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Take 1 step. Turn left. Turn left. Take 9 steps.\nA:\nAnswer: True\n\nExample 84:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 2 steps. Turn around. Turn right. Turn left. Take 2 steps. Turn around. Turn around.\nA:\nAnswer: True\n\nExample 85:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step backward. Take 5 steps forward. Take 10 steps backward. Take 9 steps forward. Take 7 steps right.\nA:\nAnswer: False\n\nExample 86:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step forward. Take 10 steps forward. Take 6 steps backward. Take 7 steps backward. Take 1 step left. Take 10 steps right.\nA:\nAnswer: False\n\nExample 87:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps left. Take 4 steps forward. Take 1 step left. Take 4 steps backward.\nA:\nAnswer: False\n\nExample 88:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps right. Take 5 steps right. Take 2 steps backward.\nA:\nAnswer: False\n\nExample 89:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn right. Take 8 steps. Take 4 steps. Turn right. Turn right. Take 10 steps. Take 1 step. Take 1 step.\nA:\nAnswer: True\n\nExample 90:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn around. Turn around. Take 7 steps. Take 6 steps. Take 5 steps.\nA:\nAnswer: False\n\nExample 91:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps forward. Take 8 steps right. Take 8 steps right. Take 9 steps left. Take 6 steps right. Take 2 steps forward. Take 9 steps backward.\nA:\nAnswer: False\n\nExample 92:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 9 steps. Take 9 steps.\nA:\nAnswer: False\n\nExample 93:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps left. Take 3 steps backward. Take 3 steps left.\nA:\nAnswer: False\n\nExample 94:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 7 steps. Turn around. Take 10 steps. Take 2 steps. Turn around. Take 5 steps. Turn left.\nA:\nAnswer: True\n\nExample 95:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Take 10 steps. Take 6 steps. Turn left. Take 3 steps. Take 3 steps.\nA:\nAnswer: False\n\nExample 96:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 2 steps. Take 8 steps. Take 8 steps. Take 6 steps.\nA:\nAnswer: False\n\nExample 97:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Turn right. Turn right. Take 7 steps. Turn around. Take 1 step.\nA:\nAnswer: True\n\nExample 98:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps right. Take 6 steps right. Take 10 steps backward. Take 9 steps left. Take 4 steps left.\nA:\nAnswer: False\n\nExample 99:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Take 6 steps. Take 6 steps. Turn left. Take 8 steps. Take 1 step. Take 3 steps. Take 7 steps. Take 8 steps.\nA:\nAnswer: False\n\nExample 100:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps backward. Take 2 steps backward. Take 1 step forward. Take 6 steps forward. Take 3 steps forward.\nA:\nAnswer: False\n\nExample 101:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 7 steps. Turn around. Take 7 steps. Turn left. Turn around. Turn around. Turn left.\nA:\nAnswer: True\n\nExample 102:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn around. Turn right. Take 7 steps. Turn right.\nA:\nAnswer: False\n\nExample 103:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps right. Take 7 steps right. Take 1 step left. Take 4 steps left. Take 6 steps left.\nA:\nAnswer: True\n\nExample 104:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 7 steps. Turn left. Turn left. Take 9 steps. Take 2 steps. Turn left. Take 4 steps.\nA:\nAnswer: False\n\nExample 105:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Turn left. Take 4 steps. Take 4 steps.\nA:\nAnswer: False\n\nExample 106:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Turn left. Take 6 steps. Turn around. Take 2 steps. Take 10 steps.\nA:\nAnswer: False\n\nExample 107:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 2 steps. Take 2 steps. Turn around. Take 4 steps. Turn right.\nA:\nAnswer: True\n\nExample 108:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps right. Take 7 steps left. Take 8 steps right. Take 6 steps left.\nA:\nAnswer: True\n\nExample 109:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Take 8 steps. Take 2 steps. Turn right. Take 8 steps. Turn left. Take 6 steps. Take 6 steps.\nA:\nAnswer: False\n\nExample 110:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Take 8 steps. Turn left. Take 3 steps. Take 1 step. Take 6 steps. Take 7 steps.\nA:\nAnswer: False\n\nExample 111:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn around. Turn left. Take 6 steps. Take 4 steps.\nA:\nAnswer: False\n\nExample 112:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps left. Take 4 steps left. Take 1 step left. Take 2 steps left. Take 2 steps right. Take 3 steps left. Take 5 steps forward. Take 3 steps backward.\nA:\nAnswer: False\n\nExample 113:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Take 9 steps. Turn around. Take 5 steps. Turn left.\nA:\nAnswer: False\n\nExample 114:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps left. Take 10 steps right. Take 7 steps backward. Take 7 steps forward.\nA:\nAnswer: True\n\nExample 115:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps left. Take 7 steps right. Take 4 steps right. Take 1 step left.\nA:\nAnswer: True\n\nExample 116:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Take 2 steps. Turn right. Turn right. Take 10 steps.\nA:\nAnswer: True\n\nExample 117:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps backward. Take 6 steps forward. Take 6 steps backward. Take 7 steps forward.\nA:\nAnswer: True\n\nExample 118:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Turn left. Turn left. Take 1 step. Take 5 steps. Turn around.\nA:\nAnswer: True\n\nExample 119:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps backward. Take 8 steps forward. Take 10 steps backward. Take 2 steps forward. Take 4 steps forward.\nA:\nAnswer: True\n\nExample 120:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps forward. Take 3 steps backward.\nA:\nAnswer: True\n\nExample 121:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 7 steps. Take 6 steps. Take 5 steps. Turn around. Take 5 steps. Take 3 steps. Take 4 steps. Take 6 steps.\nA:\nAnswer: True\n\nExample 122:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps right. Take 5 steps right. Take 9 steps left.\nA:\nAnswer: True\n\nExample 123:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Turn around. Take 1 step. Take 6 steps. Turn left. Turn left. Take 7 steps.\nA:\nAnswer: True\n\nExample 124:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 5 steps. Take 6 steps.\nA:\nAnswer: False\n\nExample 125:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps right. Take 10 steps left. Take 10 steps backward. Take 3 steps backward. Take 5 steps backward. Take 8 steps forward.\nA:\nAnswer: False\n\nExample 126:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 2 steps. Take 8 steps. Turn around.\nA:\nAnswer: False\n\nExample 127:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps backward. Take 8 steps left. Take 3 steps right. Take 7 steps forward. Take 3 steps right. Take 9 steps right. Take 1 step backward. Take 7 steps left.\nA:\nAnswer: True\n\nExample 128:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 5 steps. Take 9 steps. Take 7 steps. Turn around. Take 1 step. Take 10 steps.\nA:\nAnswer: False\n\nExample 129:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps backward. Take 1 step forward. Take 1 step backward. Take 5 steps forward. Take 6 steps backward. Take 8 steps forward.\nA:\nAnswer: True\n\nExample 130:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps right. Take 5 steps forward. Take 10 steps forward.\nA:\nAnswer: False\n\nExample 131:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Take 2 steps. Take 3 steps. Turn around. Take 4 steps. Turn around. Take 4 steps.\nA:\nAnswer: False\n\nExample 132:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step right. Take 2 steps forward. Take 2 steps right. Take 4 steps right.\nA:\nAnswer: False\n\nExample 133:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps forward. Take 2 steps backward. Take 4 steps right. Take 7 steps right.\nA:\nAnswer: False\n\nExample 134:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Take 4 steps. Turn around. Take 10 steps. Take 8 steps. Turn around. Take 2 steps. Take 7 steps.\nA:\nAnswer: True\n\nExample 135:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps forward. Take 3 steps backward.\nA:\nAnswer: False\n\nExample 136:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps left. Take 4 steps forward. Take 2 steps forward.\nA:\nAnswer: False\n\nExample 137:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps left. Take 4 steps backward. Take 10 steps right. Take 2 steps left. Take 3 steps left. Take 7 steps right.\nA:\nAnswer: False\n\nExample 138:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 2 steps. Turn right. Take 6 steps. Take 10 steps. Take 7 steps.\nA:\nAnswer: False\n\nExample 139:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step right. Take 4 steps forward. Take 8 steps forward. Take 6 steps backward. Take 1 step left. Take 6 steps right.\nA:\nAnswer: False\n\nExample 140:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps left. Take 5 steps right. Take 2 steps left. Take 2 steps right. Take 6 steps forward. Take 10 steps backward. Take 1 step forward. Take 6 steps left.\nA:\nAnswer: False\n\nExample 141:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps left. Take 8 steps right.\nA:\nAnswer: True\n\nExample 142:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Take 10 steps. Turn around.\nA:\nAnswer: False\n\nExample 143:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps left. Take 7 steps left. Take 2 steps left.\nA:\nAnswer: False\n\nExample 144:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 1 step. Take 5 steps. Take 10 steps. Take 4 steps. Take 4 steps. Take 1 step. Turn right.\nA:\nAnswer: False\n\nExample 145:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn right. Take 5 steps. Take 4 steps. Turn around. Take 9 steps.\nA:\nAnswer: True\n\nExample 146:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn around. Turn around. Turn left. Take 7 steps. Take 8 steps.\nA:\nAnswer: False\n\nExample 147:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn right. Turn around. Take 2 steps. Take 6 steps. Take 4 steps.\nA:\nAnswer: False\n\nExample 148:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps left. Take 9 steps right. Take 1 step right.\nA:\nAnswer: False\n\nExample 149:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 1 step. Take 5 steps. Take 1 step. Turn left. Turn left. Take 9 steps.\nA:\nAnswer: False\n\nExample 150:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 2 steps. Turn around. Take 9 steps. Take 7 steps. Take 6 steps. Turn left. Take 2 steps.\nA:\nAnswer: False\n\nExample 151:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 7 steps. Take 8 steps. Take 10 steps. Turn around. Turn around. Take 5 steps. Turn around.\nA:\nAnswer: False\n\nExample 152:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Turn left. Turn left. Take 9 steps.\nA:\nAnswer: True\n\nExample 153:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps forward. Take 9 steps backward.\nA:\nAnswer: False\n\nExample 154:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps forward. Take 7 steps backward. Take 4 steps right. Take 10 steps backward. Take 4 steps backward.\nA:\nAnswer: False\n\nExample 155:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps right. Take 3 steps forward. Take 8 steps right. Take 2 steps right.\nA:\nAnswer: False\n\nExample 156:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps right. Take 8 steps left.\nA:\nAnswer: True\n\nExample 157:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step backward. Take 4 steps left. Take 4 steps left.\nA:\nAnswer: False\n\nExample 158:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps forward. Take 8 steps backward. Take 4 steps forward. Take 4 steps right.\nA:\nAnswer: False\n\nExample 159:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Turn around. Take 4 steps. Take 1 step. Turn left. Turn around. Turn left.\nA:\nAnswer: True\n\nExample 160:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Turn around. Take 1 step. Take 9 steps. Turn around.\nA:\nAnswer: True\n\nExample 161:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 7 steps. Turn around. Take 7 steps.\nA:\nAnswer: True\n\nExample 162:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps backward. Take 8 steps forward. Take 7 steps forward. Take 5 steps backward.\nA:\nAnswer: False\n\nExample 163:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step forward. Take 4 steps left. Take 6 steps left. Take 10 steps right. Take 7 steps backward. Take 5 steps left.\nA:\nAnswer: False\n\nExample 164:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 1 step. Take 7 steps. Take 1 step.\nA:\nAnswer: False\n\nExample 165:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Take 6 steps. Take 3 steps. Turn around. Take 1 step. Take 3 steps. Take 5 steps.\nA:\nAnswer: True\n\nExample 166:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Turn around. Take 10 steps.\nA:\nAnswer: True\n\nExample 167:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 2 steps. Take 1 step. Take 8 steps. Take 4 steps. Turn right. Turn right. Take 4 steps. Turn left. Turn around.\nA:\nAnswer: False\n\nExample 168:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Take 5 steps. Take 9 steps. Take 3 steps. Turn right.\nA:\nAnswer: False\n\nExample 169:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Take 1 step. Take 10 steps.\nA:\nAnswer: False\n\nExample 170:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps left. Take 2 steps right. Take 6 steps right.\nA:\nAnswer: True\n\nExample 171:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 10 steps. Turn around. Take 10 steps.\nA:\nAnswer: True\n\nExample 172:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps right. Take 8 steps backward. Take 1 step backward. Take 8 steps backward. Take 8 steps forward.\nA:\nAnswer: False\n\nExample 173:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps backward. Take 4 steps left. Take 7 steps left. Take 7 steps right. Take 8 steps forward.\nA:\nAnswer: False\n\nExample 174:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Turn left. Turn around. Take 9 steps. Take 8 steps. Turn right. Turn around. Take 8 steps.\nA:\nAnswer: False\n\nExample 175:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 1 step. Take 2 steps. Turn right. Take 6 steps.\nA:\nAnswer: False\n\nExample 176:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 2 steps. Take 10 steps. Turn around. Take 6 steps. Turn left. Turn right. Take 6 steps.\nA:\nAnswer: True\n\nExample 177:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 7 steps. Take 4 steps. Take 3 steps. Take 10 steps. Turn left. Turn around.\nA:\nAnswer: False\n\nExample 178:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps backward. Take 8 steps forward. Take 10 steps forward. Take 8 steps backward. Take 8 steps right. Take 6 steps backward. Take 7 steps forward. Take 8 steps forward.\nA:\nAnswer: False\n\nExample 179:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn around. Take 4 steps. Take 5 steps. Turn left. Take 3 steps.\nA:\nAnswer: False\n\nExample 180:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 2 steps. Take 2 steps. Turn left. Take 5 steps. Take 8 steps. Turn around.\nA:\nAnswer: False\n\nExample 181:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps left. Take 7 steps right. Take 4 steps backward.\nA:\nAnswer: False\n\nExample 182:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Take 4 steps. Take 7 steps. Take 1 step. Take 2 steps. Take 10 steps.\nA:\nAnswer: False\n\nExample 183:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps forward. Take 10 steps right. Take 8 steps right.\nA:\nAnswer: False\n\nExample 184:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 7 steps. Turn around. Take 7 steps. Turn left.\nA:\nAnswer: True\n\nExample 185:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps forward. Take 5 steps left. Take 6 steps forward. Take 8 steps backward. Take 5 steps backward. Take 1 step backward. Take 1 step backward.\nA:\nAnswer: False\n\nExample 186:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 2 steps. Take 3 steps. Turn around. Take 5 steps.\nA:\nAnswer: True\n\nExample 187:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 2 steps. Take 10 steps. Take 8 steps.\nA:\nAnswer: False\n\nExample 188:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 9 steps. Take 2 steps. Take 5 steps. Turn right. Turn right. Take 5 steps. Take 10 steps. Take 1 step.\nA:\nAnswer: True\n\nExample 189:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 5 steps. Take 6 steps. Take 4 steps. Take 1 step. Turn around. Take 6 steps. Take 10 steps. Turn around.\nA:\nAnswer: True\n\nExample 190:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps left. Take 9 steps left. Take 8 steps right. Take 8 steps left. Take 3 steps right.\nA:\nAnswer: False\n\nExample 191:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps backward. Take 9 steps forward.\nA:\nAnswer: True\n\nExample 192:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 2 steps. Take 3 steps. Turn around. Take 4 steps. Take 1 step.\nA:\nAnswer: True\n\nExample 193:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps backward. Take 9 steps backward. Take 9 steps backward. Take 9 steps left. Take 10 steps right. Take 3 steps right. Take 3 steps forward. Take 9 steps right.\nA:\nAnswer: False\n\nExample 194:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Turn right. Turn left. Take 5 steps. Take 10 steps. Take 7 steps. Turn left.\nA:\nAnswer: False\n\nExample 195:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps left. Take 10 steps right.\nA:\nAnswer: True\n\nExample 196:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 1 step. Take 8 steps. Turn around. Take 8 steps.\nA:\nAnswer: False\n\nExample 197:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps forward. Take 8 steps left. Take 3 steps backward. Take 7 steps right. Take 2 steps forward. Take 4 steps forward. Take 10 steps forward.\nA:\nAnswer: False\n\nExample 198:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps forward. Take 9 steps right. Take 6 steps right. Take 8 steps right.\nA:\nAnswer: False\n\nExample 199:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Take 5 steps. Turn around. Take 3 steps. Take 5 steps. Turn right. Turn right.\nA:\nAnswer: True\n\nExample 200:\nQuestion: If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps backward. Take 5 steps backward. Take 5 steps right. Take 9 steps right.\nA:\nAnswer: False\n\nLearn from the given examples and answer the question.",
+    "accuracy": 0.695,
+    "results": [
+      {
+        "Index": 0,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps backward. Take 3 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 1,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 4 steps. Take 7 steps. Turn around. Take 7 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": false
+      },
+      {
+        "Index": 2,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps backward. Take 4 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 3,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Take 2 steps. Turn around. Take 8 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 4,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps backward. Take 1 step forward. Take 1 step forward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 5,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Turn around. Take 2 steps. Take 8 steps. Turn right.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 6,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps left. Take 4 steps right.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 7,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps backward. Take 7 steps backward. Take 8 steps forward. Take 10 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 8,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps forward. Take 8 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 9,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Turn right. Take 4 steps. Turn around. Take 1 step. Take 2 steps. Take 1 step.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 10,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Turn left. Take 6 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 11,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Take 3 steps. Take 4 steps. Turn around. Take 6 steps. Take 6 steps. Take 3 steps. Turn left.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 12,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps left. Take 3 steps right. Take 4 steps right. Take 9 steps right. Take 10 steps left.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 13,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 2 steps. Turn around. Take 10 steps. Take 2 steps. Turn left. Turn left. Take 10 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 14,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps left. Take 4 steps backward. Take 7 steps left. Take 8 steps right. Take 5 steps forward. Take 1 step left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 15,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 5 steps. Turn right. Take 5 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 16,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Take 7 steps. Turn around.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 17,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Turn around. Take 8 steps. Turn left. Turn right.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 18,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps backward. Take 9 steps right. Take 5 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 19,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps left. Take 2 steps right. Take 9 steps right. Take 3 steps forward. Take 9 steps left. Take 2 steps right. Take 3 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 20,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Turn left. Turn left. Take 3 steps. Take 2 steps. Take 8 steps. Turn around. Take 7 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 21,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 5 steps. Take 7 steps. Take 4 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 22,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 5 steps. Turn around. Take 1 step. Take 10 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 23,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps left. Take 7 steps backward. Take 10 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 24,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps right. Take 2 steps right. Take 5 steps left.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 25,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Take 9 steps. Turn around. Take 6 steps. Take 2 steps. Take 9 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 26,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Turn left. Turn around. Turn right. Take 4 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 27,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 3 steps. Take 5 steps. Turn around.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 28,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps right. Take 8 steps left. Take 3 steps left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 29,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step left. Take 4 steps backward. Take 8 steps forward. Take 6 steps backward. Take 10 steps right. Take 2 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 30,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps backward. Take 3 steps forward. Take 7 steps forward. Take 6 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 31,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Take 1 step. Turn around. Take 3 steps. Turn right. Turn left. Take 6 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 32,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps left. Take 9 steps backward. Take 3 steps forward. Take 1 step forward. Take 3 steps left. Take 5 steps forward. Take 8 steps left. Take 1 step right. Take 6 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 33,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 1 step. Take 9 steps. Take 8 steps. Take 2 steps. Take 5 steps. Take 5 steps. Turn right. Take 9 steps. Take 6 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 34,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Take 3 steps. Turn around. Take 6 steps. Take 1 step. Take 1 step. Turn around.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 35,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps backward. Take 8 steps backward. Take 4 steps forward. Take 10 steps right. Take 2 steps right. Take 3 steps left. Take 10 steps right. Take 3 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 36,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 3 steps. Turn around. Take 2 steps. Take 1 step.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 37,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Turn around. Take 5 steps. Turn left. Turn around.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 38,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps right. Take 10 steps left. Take 3 steps left. Take 1 step forward. Take 4 steps left. Take 10 steps left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 39,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps left. Take 5 steps left. Take 8 steps right. Take 6 steps right.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 40,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps left. Take 2 steps backward. Take 4 steps right. Take 5 steps left. Take 5 steps right.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 41,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Turn around. Take 3 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 42,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Turn right. Take 8 steps. Turn right. Turn right. Take 8 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 43,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps backward. Take 7 steps backward. Take 1 step right. Take 7 steps right. Take 10 steps forward. Take 1 step right. Take 10 steps right. Take 1 step backward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 44,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 8 steps. Turn around. Take 8 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 45,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 3 steps. Turn around. Take 3 steps. Turn right.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 46,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Take 3 steps. Turn right.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 47,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps left. Take 6 steps left. Take 3 steps left. Take 2 steps backward. Take 9 steps right. Take 6 steps left. Take 10 steps forward. Take 6 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 48,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps right. Take 10 steps left. Take 4 steps right.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 49,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Turn around. Take 6 steps. Take 2 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 50,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps backward. Take 7 steps left. Take 2 steps forward. Take 8 steps right. Take 2 steps backward. Take 4 steps right. Take 3 steps forward. Take 5 steps left.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 51,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Turn around. Take 9 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 52,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps left. Take 5 steps left. Take 6 steps forward. Take 9 steps right.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 53,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps right. Take 9 steps right. Take 2 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 54,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps forward. Take 4 steps backward. Take 2 steps backward. Take 2 steps right. Take 1 step forward. Take 4 steps right. Take 6 steps backward. Take 7 steps right.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 55,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Turn around. Turn around. Turn around. Take 4 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 56,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps right. Take 9 steps right. Take 7 steps forward. Take 4 steps backward. Take 9 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 57,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Turn left. Take 8 steps. Take 6 steps. Take 6 steps. Turn around. Turn left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 58,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps backward. Take 3 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 59,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 10 steps. Take 1 step.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 60,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps left. Take 6 steps left. Take 10 steps forward. Take 6 steps left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 61,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps left. Take 6 steps right. Take 4 steps forward. Take 10 steps forward. Take 6 steps left. Take 1 step left. Take 10 steps forward. Take 2 steps right.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 62,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Take 4 steps. Turn around. Take 1 step. Take 6 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 63,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Take 2 steps. Take 2 steps. Take 2 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 64,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps forward. Take 1 step forward. Take 2 steps forward. Take 2 steps right. Take 2 steps left. Take 8 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 65,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps left. Take 6 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 66,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Turn around. Turn left. Take 7 steps. Take 4 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 67,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps backward. Take 3 steps backward. Take 1 step forward. Take 4 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 68,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 7 steps. Take 3 steps. Take 2 steps. Take 3 steps. Take 9 steps. Turn around. Take 10 steps. Take 4 steps. Take 10 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 69,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps forward. Take 4 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 70,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps forward. Take 6 steps backward. Take 3 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 71,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 10 steps. Turn around. Take 10 steps. Turn around.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 72,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn around. Take 8 steps. Take 4 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 73,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 10 steps. Take 6 steps. Take 4 steps. Take 2 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 74,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps forward. Take 2 steps forward. Take 1 step right. Take 4 steps backward. Take 2 steps backward. Take 1 step right. Take 2 steps left.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 75,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 8 steps. Take 6 steps. Take 10 steps. Turn right. Take 6 steps. Turn left. Take 10 steps. Turn left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 76,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps forward. Take 3 steps backward. Take 1 step backward. Take 4 steps left. Take 8 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 77,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps right. Take 10 steps backward. Take 5 steps right. Take 10 steps forward. Take 6 steps right. Take 6 steps backward. Take 6 steps right. Take 4 steps right.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 78,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps left. Take 5 steps right. Take 3 steps right.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 79,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps right. Take 9 steps forward. Take 1 step backward. Take 3 steps right. Take 7 steps right.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 80,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps right. Take 6 steps forward. Take 4 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 81,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps forward. Take 7 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 82,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step right. Take 9 steps forward. Take 10 steps backward. Take 5 steps right. Take 4 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 83,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps forward. Take 8 steps right. Take 3 steps left. Take 1 step forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 84,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps left. Take 7 steps backward. Take 1 step right. Take 5 steps forward. Take 6 steps left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 85,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Take 1 step. Turn around. Take 9 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 86,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 6 steps. Turn left. Turn right. Turn around. Take 6 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 87,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 8 steps. Take 1 step. Turn around. Take 9 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 88,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps backward. Take 5 steps left. Take 4 steps left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 89,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Take 6 steps. Turn around. Take 10 steps. Take 6 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 90,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps backward. Take 8 steps left. Take 4 steps backward. Take 7 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 91,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps left. Take 3 steps right.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 92,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps right. Take 8 steps forward. Take 1 step forward. Take 4 steps left. Take 1 step right. Take 9 steps backward. Take 3 steps left.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 93,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps left. Take 7 steps forward. Take 2 steps backward. Take 2 steps right. Take 4 steps left. Take 5 steps backward. Take 7 steps right.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 94,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 2 steps. Take 7 steps. Turn right. Take 8 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 95,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Turn around. Turn left. Turn right. Turn right. Turn right. Turn around. Take 4 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 96,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Take 5 steps. Turn around. Take 5 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 97,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Take 3 steps. Turn right. Turn left. Turn around. Take 8 steps. Take 5 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 98,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Take 7 steps. Turn right. Take 9 steps. Take 5 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 99,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Take 1 step. Take 3 steps. Take 6 steps. Take 1 step. Turn around.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 100,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps right. Take 7 steps left. Take 4 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 101,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Turn right. Turn right. Take 9 steps. Turn around.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 102,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps backward. Take 8 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 103,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Take 9 steps. Take 6 steps. Take 8 steps. Take 7 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 104,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Turn right. Turn left. Take 3 steps. Turn right. Take 4 steps. Take 5 steps. Take 6 steps. Turn around.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 105,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 1 step. Take 9 steps. Take 5 steps. Take 10 steps. Take 4 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 106,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Turn right. Turn right. Take 9 steps. Turn right. Turn left.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 107,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 5 steps. Turn left. Take 9 steps. Take 5 steps. Take 7 steps. Take 4 steps. Take 3 steps. Take 10 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 108,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps backward. Take 6 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 109,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps forward. Take 2 steps backward. Take 5 steps backward. Take 4 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 110,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Turn around. Take 3 steps. Turn left. Turn left. Take 1 step.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": false
+      },
+      {
+        "Index": 111,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step left. Take 1 step forward. Take 3 steps forward. Take 6 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 112,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 9 steps right. Take 9 steps left.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 113,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 6 steps backward. Take 6 steps right. Take 4 steps forward. Take 4 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 114,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 8 steps. Turn around. Take 8 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 115,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps backward. Take 6 steps left. Take 2 steps right. Take 4 steps left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 116,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps left. Take 7 steps left. Take 3 steps left. Take 3 steps right. Take 3 steps forward. Take 6 steps left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 117,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Take 9 steps. Turn left. Take 7 steps. Take 8 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 118,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps right. Take 3 steps right.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 119,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 5 steps. Turn around. Take 7 steps. Take 10 steps. Take 1 step.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 120,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn around. Take 3 steps. Turn around. Take 3 steps. Take 7 steps. Turn around. Take 7 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 121,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 1 step. Take 7 steps. Take 9 steps. Take 5 steps. Turn left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 122,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps left. Take 7 steps left. Take 4 steps left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 123,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 3 steps. Take 7 steps. Take 4 steps. Take 9 steps. Turn around. Take 9 steps. Take 9 steps. Take 5 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 124,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Turn around. Take 6 steps. Turn left.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 125,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps backward. Take 9 steps forward. Take 4 steps right.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 126,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Turn left. Turn around. Turn right. Take 4 steps. Turn left.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 127,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 1 step. Turn around. Take 7 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 128,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 10 steps. Take 7 steps. Turn around. Turn right.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 129,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps backward. Take 4 steps right. Take 7 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 130,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps forward. Take 1 step right. Take 4 steps backward. Take 9 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 131,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 6 steps. Turn around.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 132,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps forward. Take 2 steps backward. Take 3 steps right. Take 7 steps forward. Take 9 steps right.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 133,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps right. Take 4 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 134,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps right. Take 4 steps right. Take 2 steps forward. Take 3 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 135,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps left. Take 7 steps forward. Take 5 steps left. Take 1 step left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 136,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Turn around. Take 8 steps. Take 9 steps. Turn around. Take 8 steps. Take 3 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 137,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Turn around. Take 9 steps. Turn left.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 138,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Take 8 steps. Turn around. Turn left. Turn left. Turn around. Take 6 steps. Take 6 steps. Turn left.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 139,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn left. Take 9 steps. Turn around. Take 5 steps. Take 4 steps. Turn right.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 140,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps forward. Take 1 step backward. Take 3 steps left. Take 3 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 141,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 4 steps. Take 8 steps. Turn around. Take 2 steps. Take 7 steps. Take 8 steps. Take 1 step.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 142,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps right. Take 8 steps forward. Take 7 steps left. Take 5 steps backward. Take 4 steps forward. Take 7 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 143,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps left. Take 7 steps right. Take 1 step left. Take 8 steps left. Take 4 steps backward. Take 7 steps left. Take 8 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 144,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 8 steps. Take 10 steps. Turn left. Turn left. Take 9 steps. Take 3 steps. Take 1 step. Take 5 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 145,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Turn right. Take 7 steps. Turn right. Turn right. Take 7 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 146,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps forward. Take 9 steps left. Take 6 steps left. Take 6 steps right. Take 1 step right. Take 3 steps left. Take 4 steps left. Take 8 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 147,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 4 steps. Take 8 steps. Turn around. Take 7 steps. Take 2 steps. Take 3 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 148,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 1 step. Take 6 steps. Turn left. Take 4 steps. Take 4 steps. Turn around. Take 4 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 149,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 8 steps. Take 7 steps. Turn around. Take 9 steps. Take 6 steps. Turn right.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 150,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 7 steps. Take 10 steps. Take 6 steps. Turn around. Take 8 steps. Take 3 steps. Take 10 steps. Take 8 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 151,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 7 steps. Take 3 steps. Take 5 steps. Take 6 steps. Take 5 steps. Take 1 step. Turn right. Turn right. Take 10 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 152,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn right. Take 8 steps. Turn right. Turn right. Take 1 step. Take 7 steps. Turn right.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 153,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Take 2 steps. Turn left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 154,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step forward. Take 5 steps backward. Take 4 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 155,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps right. Take 5 steps right. Take 8 steps left.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 156,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps forward. Take 3 steps right. Take 3 steps backward. Take 8 steps forward. Take 7 steps left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 157,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step backward. Take 7 steps forward. Take 1 step left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 158,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps forward. Take 2 steps forward. Take 5 steps backward. Take 7 steps backward. Take 7 steps forward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 159,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 10 steps. Turn around. Take 6 steps. Take 3 steps. Turn right. Take 7 steps. Take 10 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 160,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 7 steps. Take 10 steps. Take 9 steps. Take 2 steps. Turn around.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 161,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps left. Take 5 steps right. Take 6 steps left. Take 5 steps forward. Take 1 step forward. Take 9 steps left. Take 9 steps right. Take 3 steps right. Take 6 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 162,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 6 steps. Turn right. Turn right.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 163,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 5 steps. Take 1 step. Take 10 steps. Take 2 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 164,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps left. Take 7 steps right.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 165,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Turn right. Turn left. Take 5 steps. Turn around. Take 5 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 166,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps left. Take 10 steps forward. Take 1 step forward. Take 10 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 167,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 3 steps left. Take 1 step backward. Take 5 steps forward. Take 10 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 168,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Turn left. Take 6 steps. Take 4 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 169,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Take 10 steps. Take 6 steps. Turn left. Take 5 steps. Take 2 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 170,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps right. Take 3 steps right. Take 1 step right. Take 10 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 171,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Take 8 steps. Take 6 steps. Turn left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 172,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 4 steps. Turn around. Take 2 steps. Take 2 steps. Turn left.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 173,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 3 steps. Take 5 steps. Turn left. Turn left. Take 7 steps. Take 1 step. Turn right.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 174,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 6 steps. Turn around. Turn around. Turn around. Take 6 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 175,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 10 steps backward. Take 5 steps right. Take 6 steps backward. Take 2 steps backward. Take 6 steps forward. Take 8 steps right.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 176,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps forward. Take 9 steps backward. Take 7 steps forward. Take 8 steps backward. Take 10 steps forward. Take 5 steps backward. Take 2 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 177,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps backward. Take 8 steps backward. Take 10 steps left. Take 5 steps left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 178,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps left. Take 8 steps left. Take 4 steps right.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": false
+      },
+      {
+        "Index": 179,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 8 steps. Take 1 step. Take 10 steps. Take 8 steps. Turn right. Take 7 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 180,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 6 steps. Take 1 step. Turn around. Turn around. Turn around. Take 7 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 181,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps right. Take 7 steps forward. Take 8 steps left. Take 7 steps backward.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 182,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 1 step left. Take 3 steps left. Take 5 steps left. Take 9 steps right.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 183,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps right. Take 6 steps backward. Take 5 steps left. Take 3 steps forward. Take 3 steps left. Take 1 step right. Take 3 steps forward. Take 9 steps right. Take 6 steps left.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 184,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps forward. Take 10 steps left. Take 5 steps right.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 185,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 4 steps left. Take 9 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 186,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Turn right. Take 3 steps. Take 9 steps. Take 7 steps. Take 2 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 187,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 7 steps right. Take 8 steps forward. Take 7 steps right. Take 4 steps forward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 188,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 8 steps right. Take 5 steps right. Take 7 steps forward. Take 6 steps left. Take 3 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 189,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Take 9 steps. Turn around. Take 2 steps. Take 6 steps. Take 2 steps. Take 3 steps. Turn right. Turn right. Take 4 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 190,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 9 steps. Take 2 steps. Take 6 steps. Turn right. Turn left. Take 1 step. Take 9 steps. Take 8 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 191,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps left. Take 6 steps forward. Take 9 steps backward. Take 8 steps backward. Take 3 steps left.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 192,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 9 steps. Turn around. Take 9 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "True",
+        "MbaseAnswerRaw": "True",
+        "judgement": true
+      },
+      {
+        "Index": 193,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Take 6 steps. Take 2 steps. Turn around. Take 1 step. Take 7 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 194,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 9 steps. Turn around. Take 6 steps. Take 3 steps. Turn left.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 195,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 5 steps forward. Take 9 steps backward. Take 8 steps backward.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 196,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn right. Take 10 steps. Take 6 steps. Take 2 steps. Turn around. Take 4 steps. Take 2 steps. Take 3 steps. Take 9 steps.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      },
+      {
+        "Index": 197,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn left. Turn around. Turn left. Take 7 steps. Take 2 steps. Take 4 steps. Take 8 steps.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 198,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Turn around. Take 1 step. Take 6 steps. Turn around. Take 6 steps. Take 9 steps. Take 1 step.\nA:",
+        "correctAnswer": "False",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": true
+      },
+      {
+        "Index": 199,
+        "Input": "If you follow these instructions, do you return to the starting point?\nQ: Always face forward. Take 2 steps right. Take 9 steps left. Take 7 steps right.\nA:",
+        "correctAnswer": "True",
+        "MbaseAnswer": "False",
+        "MbaseAnswerRaw": "False",
+        "judgement": false
+      }
+    ]
+  }
+}

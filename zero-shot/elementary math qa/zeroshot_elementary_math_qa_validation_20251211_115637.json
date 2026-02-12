@@ -1,0 +1,1623 @@
+{
+  "timestamp": "2025-12-11T11:56:37.836585",
+  "dataset": {
+    "path": "tasksource/bigbench:elementary_math_qa[validation]",
+    "num_examples": 200
+  },
+  "config": {
+    "prompt": "You are solving multiple-choice math questions. Each question lists several answer options, each prefixed with 'choice:'. Read the question and the choices carefully. Perform the calculations step-by-step as described in the question. Answer with exactly the text of the correct choice, without the 'choice:' prefix and without any explanation or extra text.",
+    "model_name": "gpt-4o-mini",
+    "mode": "zero-shot",
+    "hf_dataset": "tasksource/bigbench",
+    "hf_task_name": "elementary_math_qa",
+    "split": "validation",
+    "used_examples": 200
+  },
+  "result": {
+    "mode": "zero-shot",
+    "prompt": "You are solving multiple-choice math questions. Each question lists several answer options, each prefixed with 'choice:'. Read the question and the choices carefully. Perform the calculations step-by-step as described in the question. Answer with exactly the text of the correct choice, without the 'choice:' prefix and without any explanation or extra text.",
+    "accuracy": 0.545,
+    "results": [
+      {
+        "Index": 0,
+        "Input": "What is the result of the following arithmetic operations?:divide 9 by 15, subtract result from 1. multiply result by 35,\n choice:14\n choice:none of these\n choice:4\n choice:12\n choice:5\nA:",
+        "correctAnswer": "14",
+        "MbaseAnswer": "5",
+        "MbaseAnswerRaw": "5",
+        "judgement": false
+      },
+      {
+        "Index": 1,
+        "Input": "What is the result of the following arithmetic operations?:subtract 6 from 26,  multiply result by 3, divide result by 4,\n choice:182\n choice:77\n choice:22\n choice:15\n choice:266\nA:",
+        "correctAnswer": "15",
+        "MbaseAnswer": "22",
+        "MbaseAnswerRaw": "22",
+        "judgement": false
+      },
+      {
+        "Index": 2,
+        "Input": "What is the result of the following arithmetic operations?:divide 30 by 2, subtract result from 30. add 2 to 1, and then divide both.\n choice:2\n choice:5\n choice:3\n choice:1\n choice:4\nA:",
+        "correctAnswer": "5",
+        "MbaseAnswer": "3",
+        "MbaseAnswerRaw": "choice:3",
+        "judgement": false
+      },
+      {
+        "Index": 3,
+        "Input": "What is the result of the following arithmetic operations?:multiply 10 to 324, add 10 to 2, and then divide both.\n choice:250\n choice:54\n choice:270\n choice:162\n choice:322\nA:",
+        "correctAnswer": "270",
+        "MbaseAnswer": "162",
+        "MbaseAnswerRaw": "choice:162",
+        "judgement": false
+      },
+      {
+        "Index": 4,
+        "Input": "What is the result of the following arithmetic operations?:multiply 10 to 1, multiply result by 10, multiply result by 3,\n choice:280\n choice:420\n choice:300\n choice:150\n choice:310\nA:",
+        "correctAnswer": "300",
+        "MbaseAnswer": "300",
+        "MbaseAnswerRaw": "choice:300",
+        "judgement": true
+      },
+      {
+        "Index": 5,
+        "Input": "What is the result of the following arithmetic operations?:divide 235 by 5,\n choice:25\n choice:47\n choice:35\n choice:17\n choice:42\nA:",
+        "correctAnswer": "47",
+        "MbaseAnswer": "47",
+        "MbaseAnswerRaw": "choice:47",
+        "judgement": true
+      },
+      {
+        "Index": 6,
+        "Input": "What is the result of the following arithmetic operations?:divide 30 by 2, subtract 1 from result,\n choice:12\n choice:18\n choice:14\n choice:10\n choice:16\nA:",
+        "correctAnswer": "14",
+        "MbaseAnswer": "14",
+        "MbaseAnswerRaw": "choice:14",
+        "judgement": true
+      },
+      {
+        "Index": 7,
+        "Input": "What is the result of the following arithmetic operations?:divide 35 by 100, multiply 800 by the result. add 800 to the result.\n choice:261\n choice:600\n choice:269\n choice:1080\n choice:277\nA:",
+        "correctAnswer": "1080",
+        "MbaseAnswer": "269",
+        "MbaseAnswerRaw": "269",
+        "judgement": false
+      },
+      {
+        "Index": 8,
+        "Input": "What is the result of the following arithmetic operations?:add 3 to 4, add result to 1, divide 1 by the result. multiply result by 600,\n choice:50\n choice:none of them\n choice:75\n choice:25\n choice:80\nA:",
+        "correctAnswer": "75",
+        "MbaseAnswer": "25",
+        "MbaseAnswerRaw": "25",
+        "judgement": false
+      },
+      {
+        "Index": 9,
+        "Input": "What is the result of the following arithmetic operations?:divide 18 by 6,\n choice:2\n choice:4\n choice:1\n choice:3\nA:",
+        "correctAnswer": "3",
+        "MbaseAnswer": "3",
+        "MbaseAnswerRaw": "choice:3",
+        "judgement": true
+      },
+      {
+        "Index": 10,
+        "Input": "What is the result of the following arithmetic operations?:multiply 100 to 3, subtract result from 376. divide result by 2, subtract result from 100.\n choice:53\n choice:62\n choice:56\n choice:49\n choice:59\nA:",
+        "correctAnswer": "62",
+        "MbaseAnswer": "56",
+        "MbaseAnswerRaw": "56",
+        "judgement": false
+      },
+      {
+        "Index": 11,
+        "Input": "What is the result of the following arithmetic operations?:multiply 100 to 3600, multiply 3 to 12, and then divide both.\n choice:rs 10000\n choice:rs 17000\n choice:rs 15000\n choice:none of these\n choice:rs 16000\nA:",
+        "correctAnswer": "rs 10000",
+        "MbaseAnswer": "rs 10000",
+        "MbaseAnswerRaw": "choice:rs 10000",
+        "judgement": true
+      },
+      {
+        "Index": 12,
+        "Input": "What is the result of the following arithmetic operations?:multiply 7 to 7, add result to 5, subtract 2 from result, divide result by 13,\n choice:4\n choice:8\n choice:5\n choice:3\n choice:7\nA:",
+        "correctAnswer": "4",
+        "MbaseAnswer": "5",
+        "MbaseAnswerRaw": "choice:5",
+        "judgement": false
+      },
+      {
+        "Index": 13,
+        "Input": "What is the result of the following arithmetic operations?:divide 1 by 4, divide 0.5 by 3, and then subtract both. divide 7 by the result.\n choice:240\n choice:90\n choice:40\n choice:120\n choice:84\nA:",
+        "correctAnswer": "84",
+        "MbaseAnswer": "40",
+        "MbaseAnswerRaw": "40",
+        "judgement": false
+      },
+      {
+        "Index": 14,
+        "Input": "What is the result of the following arithmetic operations?:add 140 to 360, multiply 1000 to 50, divide result by 3600, and then divide both.\n choice:36 seconds\n choice:none of these\n choice:46 seconds\n choice:26 seconds\n choice:56 seconds\nA:",
+        "correctAnswer": "36 seconds",
+        "MbaseAnswer": "36 seconds",
+        "MbaseAnswerRaw": "36 seconds",
+        "judgement": true
+      },
+      {
+        "Index": 15,
+        "Input": "What is the result of the following arithmetic operations?:multiply 4 to 90, multiply 3 to 95, and then subtract both.\n choice:25\n choice:80\n choice:55\n choice:20\n choice:75\nA:",
+        "correctAnswer": "75",
+        "MbaseAnswer": "25",
+        "MbaseAnswerRaw": "choice:25",
+        "judgement": false
+      },
+      {
+        "Index": 16,
+        "Input": "What is the result of the following arithmetic operations?:subtract 3 from 8,  subtract 4 from 6,  and then subtract both.\n choice:1\n choice:4\n choice:2\n choice:0\n choice:3\nA:",
+        "correctAnswer": "3",
+        "MbaseAnswer": "1",
+        "MbaseAnswerRaw": "choice:1",
+        "judgement": false
+      },
+      {
+        "Index": 17,
+        "Input": "What is the result of the following arithmetic operations?:multiply 4 to 4,\n choice:20\n choice:28\n choice:22\n choice:16\n choice:27\nA:",
+        "correctAnswer": "16",
+        "MbaseAnswer": "16",
+        "MbaseAnswerRaw": "choice:16",
+        "judgement": true
+      },
+      {
+        "Index": 18,
+        "Input": "What is the result of the following arithmetic operations?:multiply 3 to 6, subtract 3 from 6,  and then divide both.\n choice:5 1 / 2\n choice:9 1 / 2\n choice:6\n choice:5\n choice:7 1 / 2\nA:",
+        "correctAnswer": "6",
+        "MbaseAnswer": "5 1 / 2",
+        "MbaseAnswerRaw": "5 1 / 2",
+        "judgement": false
+      },
+      {
+        "Index": 19,
+        "Input": "What is the result of the following arithmetic operations?:multiply 4 to 64, subtract 248 from result, multiply 2 by the result.\n choice:16\n choice:46\n choice:26\n choice:14\n choice:36\nA:",
+        "correctAnswer": "16",
+        "MbaseAnswer": "14",
+        "MbaseAnswerRaw": "choice:14",
+        "judgement": false
+      },
+      {
+        "Index": 20,
+        "Input": "What is the result of the following arithmetic operations?:subtract 1 from 30, \n choice:10\n choice:8\n choice:29\n choice:1\n choice:30\nA:",
+        "correctAnswer": "29",
+        "MbaseAnswer": "29",
+        "MbaseAnswerRaw": "choice:29",
+        "judgement": true
+      },
+      {
+        "Index": 21,
+        "Input": "What is the result of the following arithmetic operations?:multiply 99 to 99,\n choice:' 9601']\n choice:[' 9001'\n choice:' 9621'\n choice:' 9431'\n choice:' 9801'\nA:",
+        "correctAnswer": "' 9801'",
+        "MbaseAnswer": "9801",
+        "MbaseAnswerRaw": "9801",
+        "judgement": true
+      },
+      {
+        "Index": 22,
+        "Input": "What is the result of the following arithmetic operations?:divide 64 by 2,\n choice:29\n choice:32\n choice:30\n choice:28\n choice:31\nA:",
+        "correctAnswer": "32",
+        "MbaseAnswer": "32",
+        "MbaseAnswerRaw": "choice:32",
+        "judgement": true
+      },
+      {
+        "Index": 23,
+        "Input": "What is the result of the following arithmetic operations?:add 40 to 80, divide 30 by 100, and then divide both.\n choice:500\n choice:800\n choice:600\n choice:400\n choice:700\nA:",
+        "correctAnswer": "400",
+        "MbaseAnswer": "600",
+        "MbaseAnswerRaw": "choice:600",
+        "judgement": false
+      },
+      {
+        "Index": 24,
+        "Input": "What is the result of the following arithmetic operations?:multiply 2000 to 9, add 9 to 1, and then divide both.\n choice:1600\n choice:1900\n choice:1700\n choice:1000\n choice:1800\nA:",
+        "correctAnswer": "1800",
+        "MbaseAnswer": "1800",
+        "MbaseAnswerRaw": "1800",
+        "judgement": true
+      },
+      {
+        "Index": 25,
+        "Input": "What is the result of the following arithmetic operations?:subtract 15 from 39,  add 1 to 2, and then divide both. subtract 1 from result,\n choice:11\n choice:9\n choice:7\n choice:10\n choice:8\nA:",
+        "correctAnswer": "7",
+        "MbaseAnswer": "8",
+        "MbaseAnswerRaw": "8",
+        "judgement": false
+      },
+      {
+        "Index": 26,
+        "Input": "What is the result of the following arithmetic operations?:divide 4 by 4,\n choice:2\n choice:7 / 2\n choice:3 / 4\n choice:1\n choice:4 / 3\nA:",
+        "correctAnswer": "1",
+        "MbaseAnswer": "1",
+        "MbaseAnswerRaw": "1",
+        "judgement": true
+      },
+      {
+        "Index": 27,
+        "Input": "What is the result of the following arithmetic operations?:multiply 144 to 120, subtract 120 from 144,  and then divide both.\n choice:716\n choice:722\n choice:718\n choice:715\n choice:720\nA:",
+        "correctAnswer": "720",
+        "MbaseAnswer": "720",
+        "MbaseAnswerRaw": "choice:720",
+        "judgement": true
+      },
+      {
+        "Index": 28,
+        "Input": "What is the result of the following arithmetic operations?:divide 15 by 2, multiply result by 10,\n choice:55\n choice:75\n choice:60\n choice:50\n choice:65\nA:",
+        "correctAnswer": "75",
+        "MbaseAnswer": "75",
+        "MbaseAnswerRaw": "75",
+        "judgement": true
+      },
+      {
+        "Index": 29,
+        "Input": "What is the result of the following arithmetic operations?:divide 2 by 3, multiply result by 21000, subtract result from 21000.\n choice:6000\n choice:9000\n choice:7000\n choice:10000\n choice:8000\nA:",
+        "correctAnswer": "7000",
+        "MbaseAnswer": "6000",
+        "MbaseAnswerRaw": "choice:6000",
+        "judgement": false
+      },
+      {
+        "Index": 30,
+        "Input": "What is the result of the following arithmetic operations?:multiply 20 to 60.8, divide result by 100, add 60.8 to the result.\n choice:$ 40.60\n choice:$ 72.96\n choice:$ 50.60\n choice:$ 30.60\n choice:$ 60.60\nA:",
+        "correctAnswer": "$ 72.96",
+        "MbaseAnswer": "$ 72.96",
+        "MbaseAnswerRaw": "$ 72.96",
+        "judgement": true
+      },
+      {
+        "Index": 31,
+        "Input": "What is the result of the following arithmetic operations?:subtract 1 from 6,  divide 40 by the result. subtract 1 from 12,  and then multiply both.\n choice:28\n choice:88\n choice:47\n choice:11\n choice:66\nA:",
+        "correctAnswer": "88",
+        "MbaseAnswer": "66",
+        "MbaseAnswerRaw": "choice:66",
+        "judgement": false
+      },
+      {
+        "Index": 32,
+        "Input": "What is the result of the following arithmetic operations?:subtract 3000 from 3600,  divide result by 3000, multiply result by 100,\n choice:15 %\n choice:5 %\n choice:20 %\n choice:10 %\n choice:25 %\nA:",
+        "correctAnswer": "20 %",
+        "MbaseAnswer": "20 %",
+        "MbaseAnswerRaw": "20 %",
+        "judgement": true
+      },
+      {
+        "Index": 33,
+        "Input": "What is the result of the following arithmetic operations?:subtract 32 from 70,  divide result by 2, add 1987 to the result.\n choice:2004\n choice:2007\n choice:2005\n choice:2003\n choice:2006\nA:",
+        "correctAnswer": "2006",
+        "MbaseAnswer": "2005",
+        "MbaseAnswerRaw": "2005",
+        "judgement": false
+      },
+      {
+        "Index": 34,
+        "Input": "What is the result of the following arithmetic operations?:add 500 to 1500, divide 1500 by 120, and then divide both.\n choice:160\n choice:288\n choice:12\n choice:188\nA:",
+        "correctAnswer": "160",
+        "MbaseAnswer": "12",
+        "MbaseAnswerRaw": "choice:12",
+        "judgement": false
+      },
+      {
+        "Index": 35,
+        "Input": "What is the result of the following arithmetic operations?:divide 5300 by 26.50, multiply 16 to 2, and then add both. divide result by 4,\n choice:60 m\n choice:84 m\n choice:80 m\n choice:58 m\n choice:82 m\nA:",
+        "correctAnswer": "58 m",
+        "MbaseAnswer": "80 m",
+        "MbaseAnswerRaw": "80 m",
+        "judgement": false
+      },
+      {
+        "Index": 36,
+        "Input": "What is the result of the following arithmetic operations?:divide 3 by 2, multiply 18 by the result.\n choice:23\n choice:48\n choice:27\n choice:22\n choice:36\nA:",
+        "correctAnswer": "27",
+        "MbaseAnswer": "27",
+        "MbaseAnswerRaw": "27",
+        "judgement": true
+      },
+      {
+        "Index": 37,
+        "Input": "What is the result of the following arithmetic operations?:multiply 30 to 36, multiply 24 to 8, divide result by 80, and then divide both.\n choice:237\n choice:450\n choice:281\n choice:127\n choice:287\nA:",
+        "correctAnswer": "450",
+        "MbaseAnswer": "127",
+        "MbaseAnswerRaw": "choice:127",
+        "judgement": false
+      },
+      {
+        "Index": 38,
+        "Input": "What is the result of the following arithmetic operations?:add 36 to 20, subtract result from 60.\n choice:20\n choice:4\n choice:28\n choice:14\n choice:3\nA:",
+        "correctAnswer": "4",
+        "MbaseAnswer": "4",
+        "MbaseAnswerRaw": "choice:4",
+        "judgement": true
+      },
+      {
+        "Index": 39,
+        "Input": "What is the result of the following arithmetic operations?:add 2 to 13,\n choice:15\n choice:21\n choice:17\n choice:12\n choice:19\nA:",
+        "correctAnswer": "15",
+        "MbaseAnswer": "15",
+        "MbaseAnswerRaw": "15",
+        "judgement": true
+      },
+      {
+        "Index": 40,
+        "Input": "What is the result of the following arithmetic operations?:multiply 21.3 to 16,\n choice:3.408\n choice:none of these\n choice:34.08\n choice:0.3408\n choice:340.8\nA:",
+        "correctAnswer": "340.8",
+        "MbaseAnswer": "340.8",
+        "MbaseAnswerRaw": "choice:340.8",
+        "judgement": true
+      },
+      {
+        "Index": 41,
+        "Input": "What is the result of the following arithmetic operations?:divide 12 by 60, add 3 to 15, and then multiply both.\n choice:1.6 km\n choice:3.6 km\n choice:1.8 km\n choice:1.2 km\n choice:2.4 km\nA:",
+        "correctAnswer": "3.6 km",
+        "MbaseAnswer": "1.2 km",
+        "MbaseAnswerRaw": "1.2 km",
+        "judgement": false
+      },
+      {
+        "Index": 42,
+        "Input": "What is the result of the following arithmetic operations?:divide 50 by 1000,\n choice:. 5\n choice:none of these\n choice:. 05\n choice:0.05\nA:",
+        "correctAnswer": ". 05",
+        "MbaseAnswer": "0.05",
+        "MbaseAnswerRaw": "0.05",
+        "judgement": false
+      },
+      {
+        "Index": 43,
+        "Input": "What is the result of the following arithmetic operations?:multiply 17 to 2, subtract result from 80. add result to 2,\n choice:39\n choice:48\n choice:42\n choice:37\n choice:43\nA:",
+        "correctAnswer": "48",
+        "MbaseAnswer": "42",
+        "MbaseAnswerRaw": "42",
+        "judgement": false
+      },
+      {
+        "Index": 44,
+        "Input": "What is the result of the following arithmetic operations?:divide 45 by 3, multiply result by 2, divide 54 by 3, and then add both.\n choice:52\n choice:60\n choice:54\n choice:48\n choice:58\nA:",
+        "correctAnswer": "48",
+        "MbaseAnswer": "54",
+        "MbaseAnswerRaw": "choice:54",
+        "judgement": false
+      },
+      {
+        "Index": 45,
+        "Input": "What is the result of the following arithmetic operations?:add 7 to 4, add result to 9, divide 80000 by the result. multiply result by 9,\n choice:35000\n choice:60000\n choice:36000\n choice:16000\n choice:40000\nA:",
+        "correctAnswer": "36000",
+        "MbaseAnswer": "36000",
+        "MbaseAnswerRaw": "36000",
+        "judgement": true
+      },
+      {
+        "Index": 46,
+        "Input": "What is the result of the following arithmetic operations?:subtract 1 from 12,  multiply result by 2,\n choice:12\n choice:44\n choice:22\n choice:11\n choice:24\nA:",
+        "correctAnswer": "22",
+        "MbaseAnswer": "22",
+        "MbaseAnswerRaw": "22",
+        "judgement": true
+      },
+      {
+        "Index": 47,
+        "Input": "What is the result of the following arithmetic operations?:multiply 10 to 2, add result to 10, add result to 4,\n choice:37\n choice:41\n choice:38\n choice:34\n choice:39\nA:",
+        "correctAnswer": "34",
+        "MbaseAnswer": "38",
+        "MbaseAnswerRaw": "choice:38",
+        "judgement": false
+      },
+      {
+        "Index": 48,
+        "Input": "What is the result of the following arithmetic operations?:multiply 576 to 480, subtract 480 from 576,  and then divide both.\n choice:2850\n choice:2880\n choice:2860\n choice:2840\n choice:2870\nA:",
+        "correctAnswer": "2880",
+        "MbaseAnswer": "2880",
+        "MbaseAnswerRaw": "2880",
+        "judgement": true
+      },
+      {
+        "Index": 49,
+        "Input": "What is the result of the following arithmetic operations?:divide 1 by 4,\n choice:1 : 4\n choice:2 : 5\n choice:1 : 5\n choice:1 : 2\n choice:1 : 7\nA:",
+        "correctAnswer": "1 : 4",
+        "MbaseAnswer": "1 : 4",
+        "MbaseAnswerRaw": "1 : 4",
+        "judgement": true
+      },
+      {
+        "Index": 50,
+        "Input": "What is the result of the following arithmetic operations?:subtract 1 from 12,  multiply result by 2, subtract 20 from result,\n choice:2\n choice:5\n choice:3\n choice:1\n choice:4\nA:",
+        "correctAnswer": "2",
+        "MbaseAnswer": "2",
+        "MbaseAnswerRaw": "choice:2",
+        "judgement": true
+      },
+      {
+        "Index": 51,
+        "Input": "What is the result of the following arithmetic operations?:multiply 2 to 30, divide 12 by 3, divide 3 by the result. and then multiply both.\n choice:50\n choice:63\n choice:55\n choice:45\n choice:60\nA:",
+        "correctAnswer": "45",
+        "MbaseAnswer": "60",
+        "MbaseAnswerRaw": "60",
+        "judgement": false
+      },
+      {
+        "Index": 52,
+        "Input": "What is the result of the following arithmetic operations?:divide 22 by 1000, multiply result by 3600,\n choice:79.2 kmph\n choice:99.2 kmph\n choice:79.6 kmph\n choice:69.2 kmph\n choice:89.2 kmph\nA:",
+        "correctAnswer": "79.2 kmph",
+        "MbaseAnswer": "79.2 kmph",
+        "MbaseAnswerRaw": "79.2 kmph",
+        "judgement": true
+      },
+      {
+        "Index": 53,
+        "Input": "What is the result of the following arithmetic operations?:multiply 2 to 10, divide 6 by 2, and then multiply both.\n choice:46\n choice:60\n choice:50\n choice:35\n choice:52\nA:",
+        "correctAnswer": "60",
+        "MbaseAnswer": "60",
+        "MbaseAnswerRaw": "choice:60",
+        "judgement": true
+      },
+      {
+        "Index": 54,
+        "Input": "What is the result of the following arithmetic operations?:multiply 3.6 to 25, multiply 3 to 25, and then subtract both. divide result by 3,\n choice:2 litres\n choice:none of these\n choice:5 litres\n choice:11 litres\n choice:7 litres\nA:",
+        "correctAnswer": "5 litres",
+        "MbaseAnswer": "2 litres",
+        "MbaseAnswerRaw": "choice:2 litres",
+        "judgement": false
+      },
+      {
+        "Index": 55,
+        "Input": "What is the result of the following arithmetic operations?:subtract 1 from 17,  divide 80 by the result. multiply result by 17,\n choice:30\n choice:85\n choice:40\n choice:20\n choice:60\nA:",
+        "correctAnswer": "85",
+        "MbaseAnswer": "40",
+        "MbaseAnswerRaw": "choice:40",
+        "judgement": false
+      },
+      {
+        "Index": 56,
+        "Input": "What is the result of the following arithmetic operations?:multiply 100 to 0.06, multiply 100 to 0.4, and then divide both.\n choice:20 : 3\n choice:none\n choice:3 : 20\n choice:2 : 3\n choice:3 : 4\nA:",
+        "correctAnswer": "3 : 20",
+        "MbaseAnswer": "3 : 5",
+        "MbaseAnswerRaw": "3 : 5",
+        "judgement": false
+      },
+      {
+        "Index": 57,
+        "Input": "What is the result of the following arithmetic operations?:multiply 40 to 40, divide result by 100, divide result by 64, multiply result by 12,\n choice:10\n choice:7\n choice:3\n choice:1\n choice:6\nA:",
+        "correctAnswer": "3",
+        "MbaseAnswer": "6",
+        "MbaseAnswerRaw": "choice:6",
+        "judgement": false
+      },
+      {
+        "Index": 58,
+        "Input": "What is the result of the following arithmetic operations?:multiply 1.5 to 5, add 65 to the result.\n choice:76 kg\n choice:none of these\n choice:77 kg\n choice:72.5 kg\n choice:data inadequate\nA:",
+        "correctAnswer": "72.5 kg",
+        "MbaseAnswer": "76 kg",
+        "MbaseAnswerRaw": "76 kg",
+        "judgement": false
+      },
+      {
+        "Index": 59,
+        "Input": "What is the result of the following arithmetic operations?:divide 4 by 100, multiply 6 by the result.\n choice:0.24 %\n choice:2.0 %\n choice:0.8 %\n choice:0.125 %\n choice:1.25 %\nA:",
+        "correctAnswer": "0.24 %",
+        "MbaseAnswer": "0.24 %",
+        "MbaseAnswerRaw": "choice:0.24 %",
+        "judgement": true
+      },
+      {
+        "Index": 60,
+        "Input": "What is the result of the following arithmetic operations?:add 26 to 24, divide result by 2,\n choice:25\n choice:33\n choice:27\n choice:24\n choice:28\nA:",
+        "correctAnswer": "25",
+        "MbaseAnswer": "25",
+        "MbaseAnswerRaw": "choice:25",
+        "judgement": true
+      },
+      {
+        "Index": 61,
+        "Input": "What is the result of the following arithmetic operations?:add 40 to 50, subtract 18 from result, subtract result from 100. divide result by 100,\n choice:1 / 2\n choice:9 / 10\n choice:3 / 10\n choice:1 / 10\n choice:7 / 25\nA:",
+        "correctAnswer": "7 / 25",
+        "MbaseAnswer": "1 / 10",
+        "MbaseAnswerRaw": "1 / 10",
+        "judgement": false
+      },
+      {
+        "Index": 62,
+        "Input": "What is the result of the following arithmetic operations?:subtract 675 from 1080,  divide result by 675, multiply result by 100,\n choice:22\n choice:99\n choice:60\n choice:11\n choice:88\nA:",
+        "correctAnswer": "60",
+        "MbaseAnswer": "60",
+        "MbaseAnswerRaw": "60",
+        "judgement": true
+      },
+      {
+        "Index": 63,
+        "Input": "What is the result of the following arithmetic operations?:divide 5 by 4, divide 6 by the result. multiply result by 5,\n choice:16 min\n choice:34 min\n choice:24 min\n choice:12 min\n choice:26 min\nA:",
+        "correctAnswer": "24 min",
+        "MbaseAnswer": "24 min",
+        "MbaseAnswerRaw": "24 min",
+        "judgement": true
+      },
+      {
+        "Index": 64,
+        "Input": "What is the result of the following arithmetic operations?:subtract 1 from 15,  multiply 15 by the result. divide result by 2,\n choice:105\n choice:90\n choice:30\n choice:10\n choice:60\nA:",
+        "correctAnswer": "105",
+        "MbaseAnswer": "90",
+        "MbaseAnswerRaw": "90",
+        "judgement": false
+      },
+      {
+        "Index": 65,
+        "Input": "What is the result of the following arithmetic operations?:multiply 2 to 60, subtract 10 from result,\n choice:40\n choice:80\n choice:50\n choice:110\n choice:60\nA:",
+        "correctAnswer": "110",
+        "MbaseAnswer": "110",
+        "MbaseAnswerRaw": "choice:110",
+        "judgement": true
+      },
+      {
+        "Index": 66,
+        "Input": "What is the result of the following arithmetic operations?:add 48 to 32, divide result by 2,\n choice:27\n choice:40\n choice:30\n choice:22\n choice:37\nA:",
+        "correctAnswer": "40",
+        "MbaseAnswer": "40",
+        "MbaseAnswerRaw": "choice:40",
+        "judgement": true
+      },
+      {
+        "Index": 67,
+        "Input": "What is the result of the following arithmetic operations?:add 5 to 7,\n choice:- 3\n choice:5\n choice:12\n choice:- 12\n choice:3\nA:",
+        "correctAnswer": "12",
+        "MbaseAnswer": "12",
+        "MbaseAnswerRaw": "12",
+        "judgement": true
+      },
+      {
+        "Index": 68,
+        "Input": "What is the result of the following arithmetic operations?:divide 100 by 12, divide 150 by 15, and then add both. multiply result by 30,\n choice:425\n choice:750\n choice:550\n choice:250\n choice:700\nA:",
+        "correctAnswer": "550",
+        "MbaseAnswer": "750",
+        "MbaseAnswerRaw": "choice:750",
+        "judgement": false
+      },
+      {
+        "Index": 69,
+        "Input": "What is the result of the following arithmetic operations?:multiply 15 to 10,\n choice:120\n choice:200\n choice:130\n choice:100\n choice:150\nA:",
+        "correctAnswer": "150",
+        "MbaseAnswer": "150",
+        "MbaseAnswerRaw": "choice:150",
+        "judgement": true
+      },
+      {
+        "Index": 70,
+        "Input": "What is the result of the following arithmetic operations?:multiply 5 to 5, divide result by 100, subtract result from 1. divide 2250 by the result.\n choice:1060\n choice:3000\n choice:1220\n choice:1050\n choice:1250\nA:",
+        "correctAnswer": "3000",
+        "MbaseAnswer": "1050",
+        "MbaseAnswerRaw": "1050",
+        "judgement": false
+      },
+      {
+        "Index": 71,
+        "Input": "What is the result of the following arithmetic operations?:multiply 1 to 17,\n choice:12\n choice:27\n choice:17\n choice:11\n choice:21\nA:",
+        "correctAnswer": "17",
+        "MbaseAnswer": "17",
+        "MbaseAnswerRaw": "17",
+        "judgement": true
+      },
+      {
+        "Index": 72,
+        "Input": "What is the result of the following arithmetic operations?:add 5 to 22, divide 189 by the result.\n choice:3 hours\n choice:7 hours\n choice:4 hours\n choice:2 hours\n choice:5 hours\nA:",
+        "correctAnswer": "7 hours",
+        "MbaseAnswer": "5 hours",
+        "MbaseAnswerRaw": "choice:5 hours",
+        "judgement": false
+      },
+      {
+        "Index": 73,
+        "Input": "What is the result of the following arithmetic operations?:multiply 10 to 4, subtract 4 from result,\n choice:39\n choice:52\n choice:44\n choice:36\n choice:45\nA:",
+        "correctAnswer": "36",
+        "MbaseAnswer": "36",
+        "MbaseAnswerRaw": "choice:36",
+        "judgement": true
+      },
+      {
+        "Index": 74,
+        "Input": "What is the result of the following arithmetic operations?:multiply 8 to 6, divide result by 5,\n choice:14.25 hours\n choice:9.6 hours\n choice:2.25 hours\n choice:12 hours\n choice:8.75 hours\nA:",
+        "correctAnswer": "9.6 hours",
+        "MbaseAnswer": "9.6 hours",
+        "MbaseAnswerRaw": "9.6 hours",
+        "judgement": true
+      },
+      {
+        "Index": 75,
+        "Input": "What is the result of the following arithmetic operations?:add 300 to 300, divide result by 1000, divide 45 by 3600, and then divide both.\n choice:27\n choice:48\n choice:29\n choice:21\n choice:32\nA:",
+        "correctAnswer": "48",
+        "MbaseAnswer": "27",
+        "MbaseAnswerRaw": "choice:27",
+        "judgement": false
+      },
+      {
+        "Index": 76,
+        "Input": "What is the result of the following arithmetic operations?:divide 3 by 4, subtract result from 1. divide 140 by the result.\n choice:160\n choice:90\n choice:360\n choice:120\n choice:560\nA:",
+        "correctAnswer": "560",
+        "MbaseAnswer": "120",
+        "MbaseAnswerRaw": "120",
+        "judgement": false
+      },
+      {
+        "Index": 77,
+        "Input": "What is the result of the following arithmetic operations?:add 3 to 2, multiply result by 4,\n choice:12\n choice:77\n choice:20\n choice:11\n choice:26\nA:",
+        "correctAnswer": "20",
+        "MbaseAnswer": "20",
+        "MbaseAnswerRaw": "choice:20",
+        "judgement": true
+      },
+      {
+        "Index": 78,
+        "Input": "What is the result of the following arithmetic operations?:add 2.0 to 1, multiply 8 to 3, and then divide both.\n choice:1 / 4\n choice:1 / 8\n choice:1 / 5\n choice:1 / 3\n choice:1 / 6\nA:",
+        "correctAnswer": "1 / 8",
+        "MbaseAnswer": "1 / 5",
+        "MbaseAnswerRaw": "1 / 5",
+        "judgement": false
+      },
+      {
+        "Index": 79,
+        "Input": "What is the result of the following arithmetic operations?:add 19 to 17, add result to 2, subtract 27 from result,\n choice:11\n choice:9\n choice:7\n choice:10\n choice:8\nA:",
+        "correctAnswer": "11",
+        "MbaseAnswer": "11",
+        "MbaseAnswerRaw": "choice:11",
+        "judgement": true
+      },
+      {
+        "Index": 80,
+        "Input": "What is the result of the following arithmetic operations?:divide 3600 by 10, divide 126 by the result. multiply result by 100,\n choice:25 %\n choice:70 %\n choice:30 %\n choice:20 %\n choice:35 %\nA:",
+        "correctAnswer": "35 %",
+        "MbaseAnswer": "30 %",
+        "MbaseAnswerRaw": "30 %",
+        "judgement": false
+      },
+      {
+        "Index": 81,
+        "Input": "What is the result of the following arithmetic operations?:subtract 10 from 100,  multiply result by 2000, divide result by 100,\n choice:1430\n choice:1800\n choice:1440\n choice:1420\n choice:1540\nA:",
+        "correctAnswer": "1800",
+        "MbaseAnswer": "1440",
+        "MbaseAnswerRaw": "1440",
+        "judgement": false
+      },
+      {
+        "Index": 82,
+        "Input": "What is the result of the following arithmetic operations?:multiply 15 to 36, multiply 5 to 4, divide result by 100, and then divide both.\n choice:18\n choice:2700\n choice:180\n choice:1.8\n choice:18000\nA:",
+        "correctAnswer": "2700",
+        "MbaseAnswer": "1.8",
+        "MbaseAnswerRaw": "1.8",
+        "judgement": false
+      },
+      {
+        "Index": 83,
+        "Input": "What is the result of the following arithmetic operations?:divide 160 by 8, multiply result by 3,\n choice:140\n choice:80\n choice:40\n choice:120\n choice:60\nA:",
+        "correctAnswer": "60",
+        "MbaseAnswer": "60",
+        "MbaseAnswerRaw": "60",
+        "judgement": true
+      },
+      {
+        "Index": 84,
+        "Input": "What is the result of the following arithmetic operations?:add 3 to 2,\n choice:0\n choice:5\n choice:3\n choice:- 1\n choice:4\nA:",
+        "correctAnswer": "5",
+        "MbaseAnswer": "5",
+        "MbaseAnswerRaw": "choice:5",
+        "judgement": true
+      },
+      {
+        "Index": 85,
+        "Input": "What is the result of the following arithmetic operations?:subtract 3 from 8,  multiply result by 3, multiply result by 3, add 1 to the result.\n choice:46\n choice:65\n choice:56\n choice:10\n choice:64\nA:",
+        "correctAnswer": "46",
+        "MbaseAnswer": "64",
+        "MbaseAnswerRaw": "choice:64",
+        "judgement": false
+      },
+      {
+        "Index": 86,
+        "Input": "What is the result of the following arithmetic operations?:add 50 to 150, divide 40 by 100, and then divide both.\n choice:500\n choice:650\n choice:575\n choice:400\n choice:610\nA:",
+        "correctAnswer": "500",
+        "MbaseAnswer": "650",
+        "MbaseAnswerRaw": "choice:650",
+        "judgement": false
+      },
+      {
+        "Index": 87,
+        "Input": "What is the result of the following arithmetic operations?:divide 7 by 5, divide 14 by 7, and then multiply both. multiply result by 5,\n choice:12\n choice:19\n choice:13\n choice:10\n choice:14\nA:",
+        "correctAnswer": "14",
+        "MbaseAnswer": "14",
+        "MbaseAnswerRaw": "choice:14",
+        "judgement": true
+      },
+      {
+        "Index": 88,
+        "Input": "What is the result of the following arithmetic operations?:divide 20 by 100, multiply result by 40, add 40 to the result.\n choice:108\n choice:86\n choice:48\n choice:105.6\n choice:70.4\nA:",
+        "correctAnswer": "48",
+        "MbaseAnswer": "8.0",
+        "MbaseAnswerRaw": "choice:8.0",
+        "judgement": false
+      },
+      {
+        "Index": 89,
+        "Input": "What is the result of the following arithmetic operations?:multiply 5 to 3, divide 60 by the result.\n choice:3 rs\n choice:9 rs\n choice:4 rs\n choice:2 rs\n choice:6 rs\nA:",
+        "correctAnswer": "4 rs",
+        "MbaseAnswer": "4 rs",
+        "MbaseAnswerRaw": "choice:4 rs",
+        "judgement": true
+      },
+      {
+        "Index": 90,
+        "Input": "What is the result of the following arithmetic operations?:add 12 to 15, add result to 14,\n choice:21\n choice:41\n choice:36\n choice:11\n choice:39\nA:",
+        "correctAnswer": "41",
+        "MbaseAnswer": "41",
+        "MbaseAnswerRaw": "choice:41",
+        "judgement": true
+      },
+      {
+        "Index": 91,
+        "Input": "What is the result of the following arithmetic operations?:multiply 4016.25 to 100, multiply 5 to 10, and then divide both.\n choice:8032.5\n choice:none of these\n choice:8900\n choice:4462.5\n choice:8925\nA:",
+        "correctAnswer": "8032.5",
+        "MbaseAnswer": "4462.5",
+        "MbaseAnswerRaw": "choice:4462.5",
+        "judgement": false
+      },
+      {
+        "Index": 92,
+        "Input": "What is the result of the following arithmetic operations?:divide 40 by 100, add 1 to the result. divide 1680 by the result.\n choice:1500\n choice:600\n choice:1600\n choice:1200\n choice:1680\nA:",
+        "correctAnswer": "1200",
+        "MbaseAnswer": "1680",
+        "MbaseAnswerRaw": "choice:1680",
+        "judgement": false
+      },
+      {
+        "Index": 93,
+        "Input": "What is the result of the following arithmetic operations?:divide 642 by 6,\n choice:107 kmph\n choice:298 kmph\n choice:176 kmph\n choice:104 kmph\n choice:186 kmph\nA:",
+        "correctAnswer": "107 kmph",
+        "MbaseAnswer": "107 kmph",
+        "MbaseAnswerRaw": "107 kmph",
+        "judgement": true
+      },
+      {
+        "Index": 94,
+        "Input": "What is the result of the following arithmetic operations?:divide 18750 by 750,\n choice:25\n choice:99\n choice:28\n choice:23\n choice:48\nA:",
+        "correctAnswer": "25",
+        "MbaseAnswer": "25",
+        "MbaseAnswerRaw": "25",
+        "judgement": true
+      },
+      {
+        "Index": 95,
+        "Input": "What is the result of the following arithmetic operations?:multiply 80 to 14, divide result by 20,\n choice:38 days\n choice:56 days\n choice:42 days\n choice:18 days\n choice:48 days\nA:",
+        "correctAnswer": "56 days",
+        "MbaseAnswer": "42 days",
+        "MbaseAnswerRaw": "42 days",
+        "judgement": false
+      },
+      {
+        "Index": 96,
+        "Input": "What is the result of the following arithmetic operations?:multiply 30 to 900, divide result by 100, divide result by 9,\n choice:27\n choice:72\n choice:30\n choice:20\n choice:40\nA:",
+        "correctAnswer": "30",
+        "MbaseAnswer": "30",
+        "MbaseAnswerRaw": "30",
+        "judgement": true
+      },
+      {
+        "Index": 97,
+        "Input": "What is the result of the following arithmetic operations?:add 1 to 20,\n choice:16\n choice:21\n choice:18\n choice:11\n choice:19\nA:",
+        "correctAnswer": "21",
+        "MbaseAnswer": "21",
+        "MbaseAnswerRaw": "choice:21",
+        "judgement": true
+      },
+      {
+        "Index": 98,
+        "Input": "What is the result of the following arithmetic operations?:add 29 to 2,\n choice:3\n choice:7\n choice:31\n choice:2\n choice:5\nA:",
+        "correctAnswer": "31",
+        "MbaseAnswer": "31",
+        "MbaseAnswerRaw": "choice:31",
+        "judgement": true
+      },
+      {
+        "Index": 99,
+        "Input": "What is the result of the following arithmetic operations?:add 2 to 3, divide 2 by the result. multiply result by 105,\n choice:$ 42\n choice:$ 90\n choice:$ 50\n choice:$ 100\n choice:$ 60\nA:",
+        "correctAnswer": "$ 42",
+        "MbaseAnswer": "$ 90",
+        "MbaseAnswerRaw": "$ 90",
+        "judgement": false
+      },
+      {
+        "Index": 100,
+        "Input": "What is the result of the following arithmetic operations?:multiply 30 to 3,\n choice:36 days\n choice:90 days\n choice:60 days\n choice:30 days\n choice:65 days\nA:",
+        "correctAnswer": "90 days",
+        "MbaseAnswer": "90 days",
+        "MbaseAnswerRaw": "choice:90 days",
+        "judgement": true
+      },
+      {
+        "Index": 101,
+        "Input": "What is the result of the following arithmetic operations?:add 19 to 17, add result to 2, subtract 28 from result,\n choice:11\n choice:9\n choice:7\n choice:10\n choice:8\nA:",
+        "correctAnswer": "10",
+        "MbaseAnswer": "10",
+        "MbaseAnswerRaw": "choice:10",
+        "judgement": true
+      },
+      {
+        "Index": 102,
+        "Input": "What is the result of the following arithmetic operations?:add 5 to 2, divide result by 5,\n choice:1 / 4\n choice:7 / 5\n choice:2 / 3\n choice:1 / 2\n choice:5 / 8\nA:",
+        "correctAnswer": "7 / 5",
+        "MbaseAnswer": "7 / 5",
+        "MbaseAnswerRaw": "7 / 5",
+        "judgement": true
+      },
+      {
+        "Index": 103,
+        "Input": "What is the result of the following arithmetic operations?:divide 34500 by 100, subtract 28 from 42,  and then multiply both.\n choice:$ 3500\n choice:$ 7000\n choice:$ 4830\n choice:$ 10000\n choice:$ 5000\nA:",
+        "correctAnswer": "$ 4830",
+        "MbaseAnswer": "$ 5000",
+        "MbaseAnswerRaw": "$ 5000",
+        "judgement": false
+      },
+      {
+        "Index": 104,
+        "Input": "What is the result of the following arithmetic operations?:divide 44 by 12, divide 54 by 36, and then multiply both. multiply 120 by the result.\n choice:660 acres\n choice:920 acres\n choice:720 acres\n choice:620 acres\n choice:820 acres\nA:",
+        "correctAnswer": "660 acres",
+        "MbaseAnswer": "720 acres",
+        "MbaseAnswerRaw": "720 acres",
+        "judgement": false
+      },
+      {
+        "Index": 105,
+        "Input": "What is the result of the following arithmetic operations?:add 1 to 13,\n choice:11\n choice:14\n choice:12\n choice:10\n choice:13\nA:",
+        "correctAnswer": "14",
+        "MbaseAnswer": "14",
+        "MbaseAnswerRaw": "choice:14",
+        "judgement": true
+      },
+      {
+        "Index": 106,
+        "Input": "What is the result of the following arithmetic operations?:divide 3 by 4,\n choice:' 3 : 2']\n choice:[' 3 : 4'\n choice:' 3 : 7'\n choice:' 3 : 1'\n choice:' 3 : 9'\nA:",
+        "correctAnswer": "[' 3 : 4'",
+        "MbaseAnswer": "3 : 4",
+        "MbaseAnswerRaw": "3 : 4",
+        "judgement": true
+      },
+      {
+        "Index": 107,
+        "Input": "What is the result of the following arithmetic operations?:divide 8.036 by 0.04,\n choice:2.06\n choice:200.9\n choice:20.06\n choice:100.9\n choice:200.6\nA:",
+        "correctAnswer": "200.9",
+        "MbaseAnswer": "200.9",
+        "MbaseAnswerRaw": "choice:200.9",
+        "judgement": true
+      },
+      {
+        "Index": 108,
+        "Input": "What is the result of the following arithmetic operations?:subtract 1 from 5, \n choice:- 5\n choice:4\n choice:2\n choice:- 4\n choice:3\nA:",
+        "correctAnswer": "4",
+        "MbaseAnswer": "4",
+        "MbaseAnswerRaw": "4",
+        "judgement": true
+      },
+      {
+        "Index": 109,
+        "Input": "What is the result of the following arithmetic operations?:add 4 to 2, divide 36 by the result. multiply 2 by the result.\n choice:11\n choice:9\n choice:12\n choice:10\n choice:13\nA:",
+        "correctAnswer": "12",
+        "MbaseAnswer": "10",
+        "MbaseAnswerRaw": "choice:10",
+        "judgement": false
+      },
+      {
+        "Index": 110,
+        "Input": "What is the result of the following arithmetic operations?:subtract 1 from 20,  multiply result by 4, divide 20 by 2, and then multiply both.\n choice:180\n choice:760\n choice:400\n choice:110\n choice:450\nA:",
+        "correctAnswer": "760",
+        "MbaseAnswer": "180",
+        "MbaseAnswerRaw": "180",
+        "judgement": false
+      },
+      {
+        "Index": 111,
+        "Input": "What is the result of the following arithmetic operations?:multiply 61.5 to 2, add result to 47, subtract result from 500.\n choice:530\n choice:805\n choice:670\n choice:330\n choice:740\nA:",
+        "correctAnswer": "330",
+        "MbaseAnswer": "330",
+        "MbaseAnswerRaw": "330",
+        "judgement": true
+      },
+      {
+        "Index": 112,
+        "Input": "What is the result of the following arithmetic operations?:divide 12880 by 230, divide result by 7, multiply result by 6,\n choice:28\n choice:58\n choice:32\n choice:18\n choice:48\nA:",
+        "correctAnswer": "48",
+        "MbaseAnswer": "32",
+        "MbaseAnswerRaw": "choice:32",
+        "judgement": false
+      },
+      {
+        "Index": 113,
+        "Input": "What is the result of the following arithmetic operations?:divide 80 by 20, divide 80 by 20, and then divide both.\n choice:4 : 4\n choice:6 : 4\n choice:4 : 6\n choice:3 : 7\n choice:6 : 14\nA:",
+        "correctAnswer": "4 : 4",
+        "MbaseAnswer": "4 : 4",
+        "MbaseAnswerRaw": "4 : 4",
+        "judgement": true
+      },
+      {
+        "Index": 114,
+        "Input": "What is the result of the following arithmetic operations?:divide 1000 by 1000, multiply 60 to 10, divide result by 3600, and then divide both.\n choice:4.6\n choice:8.2\n choice:6.0\n choice:12.8\n choice:7.1\nA:",
+        "correctAnswer": "6.0",
+        "MbaseAnswer": "6.0",
+        "MbaseAnswerRaw": "6.0",
+        "judgement": true
+      },
+      {
+        "Index": 115,
+        "Input": "What is the result of the following arithmetic operations?:multiply 300 to 2,\n choice:300 bc\n choice:600 bc\n choice:600 / bc\n choice:300 b / c\n choice:600 b / c\nA:",
+        "correctAnswer": "600 bc",
+        "MbaseAnswer": "600 bc",
+        "MbaseAnswerRaw": "600 bc",
+        "judgement": true
+      },
+      {
+        "Index": 116,
+        "Input": "What is the result of the following arithmetic operations?:subtract 8 from 14,  divide result by 2,\n choice:16 kmph\n choice:4 kmph\n choice:2.5 kmph\n choice:0 kmph\n choice:3 kmph\nA:",
+        "correctAnswer": "3 kmph",
+        "MbaseAnswer": "3 kmph",
+        "MbaseAnswerRaw": "3 kmph",
+        "judgement": true
+      },
+      {
+        "Index": 117,
+        "Input": "What is the result of the following arithmetic operations?:divide 26.1 by 9, multiply 11 by the result. add result to 26.1,\n choice:46\n choice:58.2\n choice:56\n choice:45\n choice:58\nA:",
+        "correctAnswer": "58",
+        "MbaseAnswer": "58.2",
+        "MbaseAnswerRaw": "58.2",
+        "judgement": false
+      },
+      {
+        "Index": 118,
+        "Input": "What is the result of the following arithmetic operations?:add 4 to 1, multiply 2 by the result. divide result by 2,\n choice:24\n choice:9\n choice:5\n choice:14\n choice:7\nA:",
+        "correctAnswer": "5",
+        "MbaseAnswer": "7",
+        "MbaseAnswerRaw": "choice:7",
+        "judgement": false
+      },
+      {
+        "Index": 119,
+        "Input": "What is the result of the following arithmetic operations?:divide 275 by 1000, add 6 to 60, and then divide both. multiply 3600 by the result.\n choice:15 sec\n choice:7 sec\n choice:5 sec\n choice:12 sec\n choice:6 sec\nA:",
+        "correctAnswer": "15 sec",
+        "MbaseAnswer": "15 sec",
+        "MbaseAnswerRaw": "15 sec",
+        "judgement": true
+      },
+      {
+        "Index": 120,
+        "Input": "What is the result of the following arithmetic operations?:multiply 7 to 7, divide 7 by 9, and then divide both. divide result by 9,\n choice:3 days\n choice:9 days\n choice:7 days\n choice:11 days\n choice:8 days\nA:",
+        "correctAnswer": "7 days",
+        "MbaseAnswer": "7 days",
+        "MbaseAnswerRaw": "choice:7 days",
+        "judgement": true
+      },
+      {
+        "Index": 121,
+        "Input": "What is the result of the following arithmetic operations?:multiply 4 to 6, multiply 4 to 2, subtract 6 from result, and then divide both.\n choice:14\n choice:8\n choice:6.75\n choice:12\n choice:7\nA:",
+        "correctAnswer": "12",
+        "MbaseAnswer": "7",
+        "MbaseAnswerRaw": "choice:7",
+        "judgement": false
+      },
+      {
+        "Index": 122,
+        "Input": "What is the result of the following arithmetic operations?:multiply 1000 to 50, divide result by 3600, multiply result by 18,\n choice:188\n choice:300\n choice:250\n choice:150\n choice:288\nA:",
+        "correctAnswer": "250",
+        "MbaseAnswer": "300",
+        "MbaseAnswerRaw": "300",
+        "judgement": false
+      },
+      {
+        "Index": 123,
+        "Input": "What is the result of the following arithmetic operations?:subtract 2.5 from 15,  subtract 2.5 from result,\n choice:20\n choice:50\n choice:30\n choice:10\n choice:40\nA:",
+        "correctAnswer": "10",
+        "MbaseAnswer": "10",
+        "MbaseAnswerRaw": "choice:10",
+        "judgement": true
+      },
+      {
+        "Index": 124,
+        "Input": "What is the result of the following arithmetic operations?:multiply 100 to 1000, multiply result by 0.036, divide 45000 by 1000, and then divide both.\n choice:20\n choice:80\n choice:30\n choice:10\n choice:60\nA:",
+        "correctAnswer": "80",
+        "MbaseAnswer": "30",
+        "MbaseAnswerRaw": "30",
+        "judgement": false
+      },
+      {
+        "Index": 125,
+        "Input": "What is the result of the following arithmetic operations?:add 21 to 19, subtract 10 from 38,  and then subtract both.\n choice:12\n choice:19\n choice:14\n choice:11\n choice:15\nA:",
+        "correctAnswer": "12",
+        "MbaseAnswer": "12",
+        "MbaseAnswerRaw": "choice:12",
+        "judgement": true
+      },
+      {
+        "Index": 126,
+        "Input": "What is the result of the following arithmetic operations?:multiply 3 to 7,\n choice:21 hours\n choice:8 hours\n choice:32 hours\n choice:14 hours\n choice:6 hours\nA:",
+        "correctAnswer": "21 hours",
+        "MbaseAnswer": "21 hours",
+        "MbaseAnswerRaw": "21 hours",
+        "judgement": true
+      },
+      {
+        "Index": 127,
+        "Input": "What is the result of the following arithmetic operations?:add 1 to 18,\n choice:14\n choice:29\n choice:19\n choice:10\n choice:21\nA:",
+        "correctAnswer": "19",
+        "MbaseAnswer": "19",
+        "MbaseAnswerRaw": "choice:19",
+        "judgement": true
+      },
+      {
+        "Index": 128,
+        "Input": "What is the result of the following arithmetic operations?:add 1 to 19, multiply result by 14.6, multiply 15 to 19, and then subtract both.\n choice:10.8 kg\n choice:none\n choice:14.9 kg\n choice:10.6 kg\n choice:7 kg\nA:",
+        "correctAnswer": "7 kg",
+        "MbaseAnswer": "10.8 kg",
+        "MbaseAnswerRaw": "10.8 kg",
+        "judgement": false
+      },
+      {
+        "Index": 129,
+        "Input": "What is the result of the following arithmetic operations?:divide 2 by 3, divide 3 by 4, and then multiply both. divide 75000 by the result.\n choice:160000\n choice:250000\n choice:170000\n choice:150000\n choice:190000\nA:",
+        "correctAnswer": "150000",
+        "MbaseAnswer": "250000",
+        "MbaseAnswerRaw": "choice:250000",
+        "judgement": false
+      },
+      {
+        "Index": 130,
+        "Input": "What is the result of the following arithmetic operations?:add 30 to 45, subtract 12 from result, subtract result from 65.\n choice:15\n choice:8\n choice:18\n choice:10\n choice:2\nA:",
+        "correctAnswer": "2",
+        "MbaseAnswer": "10",
+        "MbaseAnswerRaw": "choice:10",
+        "judgement": false
+      },
+      {
+        "Index": 131,
+        "Input": "What is the result of the following arithmetic operations?:divide 450 by 9, add result to 4,\n choice:47\n choice:54\n choice:50\n choice:38\n choice:53\nA:",
+        "correctAnswer": "54",
+        "MbaseAnswer": "50",
+        "MbaseAnswerRaw": "50",
+        "judgement": false
+      },
+      {
+        "Index": 132,
+        "Input": "What is the result of the following arithmetic operations?:add 20 to 14, divide 70 by 100, divide 14 by the result. and then subtract both.\n choice:17\n choice:6\n choice:20\n choice:14\n choice:3\nA:",
+        "correctAnswer": "14",
+        "MbaseAnswer": "3",
+        "MbaseAnswerRaw": "3",
+        "judgement": false
+      },
+      {
+        "Index": 133,
+        "Input": "What is the result of the following arithmetic operations?:divide 24 by 2,\n choice:12\n choice:19\n choice:14\n choice:10\n choice:16\nA:",
+        "correctAnswer": "12",
+        "MbaseAnswer": "12",
+        "MbaseAnswerRaw": "12",
+        "judgement": true
+      },
+      {
+        "Index": 134,
+        "Input": "What is the result of the following arithmetic operations?:multiply 1000 to 36, divide 280 by the result. multiply result by 3600,\n choice:15 sec\n choice:none\n choice:16 sec\n choice:12 sec\n choice:28 sec\nA:",
+        "correctAnswer": "28 sec",
+        "MbaseAnswer": "15 sec",
+        "MbaseAnswerRaw": "15 sec",
+        "judgement": false
+      },
+      {
+        "Index": 135,
+        "Input": "What is the result of the following arithmetic operations?:multiply 1 to 10,\n choice:12 miles\n choice:30 miles\n choice:14 miles\n choice:10 miles\n choice:20 miles\nA:",
+        "correctAnswer": "10 miles",
+        "MbaseAnswer": "10 miles",
+        "MbaseAnswerRaw": "10 miles",
+        "judgement": true
+      },
+      {
+        "Index": 136,
+        "Input": "What is the result of the following arithmetic operations?:divide 40 by 48, multiply 60 by the result. subtract result from 60.\n choice:12\n choice:17\n choice:15\n choice:10\n choice:16\nA:",
+        "correctAnswer": "10",
+        "MbaseAnswer": "15",
+        "MbaseAnswerRaw": "15",
+        "judgement": false
+      },
+      {
+        "Index": 137,
+        "Input": "What is the result of the following arithmetic operations?:multiply 2.5 to 8, add result to 65,\n choice:76.5\n choice:none of these\n choice:80\n choice:76\n choice:85\nA:",
+        "correctAnswer": "85",
+        "MbaseAnswer": "76.5",
+        "MbaseAnswerRaw": "76.5",
+        "judgement": false
+      },
+      {
+        "Index": 138,
+        "Input": "What is the result of the following arithmetic operations?:add 35 to 75, add result to 20, subtract 100 from result,\n choice:10 %\n choice:65 %\n choice:30 %\n choice:( 8 ) 20 %\n choice:50 %\nA:",
+        "correctAnswer": "30 %",
+        "MbaseAnswer": "30 %",
+        "MbaseAnswerRaw": "30 %",
+        "judgement": true
+      },
+      {
+        "Index": 139,
+        "Input": "What is the result of the following arithmetic operations?:subtract 7 from 9,  divide 7 by the result. multiply result by 16,\n choice:49\n choice:70\n choice:56\n choice:42\n choice:63\nA:",
+        "correctAnswer": "56",
+        "MbaseAnswer": "56",
+        "MbaseAnswerRaw": "56",
+        "judgement": true
+      },
+      {
+        "Index": 140,
+        "Input": "What is the result of the following arithmetic operations?:divide 7 by 2, divide 2 by 2, and then add both.\n choice:4.8 hr\n choice:6.5 hr\n choice:4.9 hr\n choice:4.5 hr\n choice:5.5 hr\nA:",
+        "correctAnswer": "4.5 hr",
+        "MbaseAnswer": "4.9 hr",
+        "MbaseAnswerRaw": "4.9 hr",
+        "judgement": false
+      },
+      {
+        "Index": 141,
+        "Input": "What is the result of the following arithmetic operations?:add 100 to 20, subtract 20 from 100,  and then multiply both.\n choice:10000\n choice:9600\n choice:1288\n choice:1000\n choice:2887\nA:",
+        "correctAnswer": "9600",
+        "MbaseAnswer": "10000",
+        "MbaseAnswerRaw": "choice:10000",
+        "judgement": false
+      },
+      {
+        "Index": 142,
+        "Input": "What is the result of the following arithmetic operations?:divide 12 by 4, multiply result by 2, multiply result by 4,\n choice:15\n choice:30\n choice:20\n choice:12\n choice:24\nA:",
+        "correctAnswer": "24",
+        "MbaseAnswer": "24",
+        "MbaseAnswerRaw": "choice:24",
+        "judgement": true
+      },
+      {
+        "Index": 143,
+        "Input": "What is the result of the following arithmetic operations?:add 2 to 1, multiply 5 to 2, and then divide both.\n choice:2 / 5\n choice:7 / 20\n choice:3 / 10\n choice:2 / 3\n choice:3 / 5\nA:",
+        "correctAnswer": "3 / 10",
+        "MbaseAnswer": "3 / 10",
+        "MbaseAnswerRaw": "3 / 10",
+        "judgement": true
+      },
+      {
+        "Index": 144,
+        "Input": "What is the result of the following arithmetic operations?:multiply 12 to 81, divide result by 9,\n choice:108\n choice:96\n choice:110\n choice:100\n choice:90\nA:",
+        "correctAnswer": "108",
+        "MbaseAnswer": "108",
+        "MbaseAnswerRaw": "108",
+        "judgement": true
+      },
+      {
+        "Index": 145,
+        "Input": "What is the result of the following arithmetic operations?:multiply 5 to 3, multiply result by 1.00, divide result by 4,\n choice:$ 3.25\n choice:$ 4.75\n choice:$ 3.75\n choice:$ 2.75\n choice:$ 4.25\nA:",
+        "correctAnswer": "$ 3.75",
+        "MbaseAnswer": "$ 3.75",
+        "MbaseAnswerRaw": "$ 3.75",
+        "judgement": true
+      },
+      {
+        "Index": 146,
+        "Input": "What is the result of the following arithmetic operations?:multiply 3 to 4, add result to 2, divide result by 2,\n choice:2\n choice:9\n choice:3\n choice:1\n choice:7\nA:",
+        "correctAnswer": "7",
+        "MbaseAnswer": "9",
+        "MbaseAnswerRaw": "9",
+        "judgement": false
+      },
+      {
+        "Index": 147,
+        "Input": "What is the result of the following arithmetic operations?:add 60 to 120, subtract result from 300. add 1 to 4, and then divide both.\n choice:30\n choice:96\n choice:36\n choice:24\n choice:90\nA:",
+        "correctAnswer": "24",
+        "MbaseAnswer": "24",
+        "MbaseAnswerRaw": "24",
+        "judgement": true
+      },
+      {
+        "Index": 148,
+        "Input": "What is the result of the following arithmetic operations?:multiply 4 to 5, add 40 to the result.\n choice:48 mph\n choice:60 mph\n choice:50 mph\n choice:45 mph\n choice:52 mph\nA:",
+        "correctAnswer": "60 mph",
+        "MbaseAnswer": "60 mph",
+        "MbaseAnswerRaw": "choice:60 mph",
+        "judgement": true
+      },
+      {
+        "Index": 149,
+        "Input": "What is the result of the following arithmetic operations?:divide 7 by 8, multiply result by 40000, subtract result from 40000.\n choice:6000\n choice:9000\n choice:7000\n choice:5000\n choice:8000\nA:",
+        "correctAnswer": "5000",
+        "MbaseAnswer": "6000",
+        "MbaseAnswerRaw": "6000",
+        "judgement": false
+      },
+      {
+        "Index": 150,
+        "Input": "What is the result of the following arithmetic operations?:multiply 0.007 to 0.9,\n choice:0.0063\n choice:63\n choice:0.063\n choice:0.00063\n choice:0.63\nA:",
+        "correctAnswer": "0.0063",
+        "MbaseAnswer": "0.0063",
+        "MbaseAnswerRaw": "choice:0.0063",
+        "judgement": true
+      },
+      {
+        "Index": 151,
+        "Input": "What is the result of the following arithmetic operations?:subtract 42000 from 70000,  add 1200 to 800, and then divide both.\n choice:13\n choice:19\n choice:14\n choice:11\n choice:18\nA:",
+        "correctAnswer": "14",
+        "MbaseAnswer": "14",
+        "MbaseAnswerRaw": "choice:14",
+        "judgement": true
+      },
+      {
+        "Index": 152,
+        "Input": "What is the result of the following arithmetic operations?:multiply 120 to 5,\n choice:375\n choice:7500\n choice:600\n choice:1250\n choice:625\nA:",
+        "correctAnswer": "600",
+        "MbaseAnswer": "600",
+        "MbaseAnswerRaw": "choice:600",
+        "judgement": true
+      },
+      {
+        "Index": 153,
+        "Input": "What is the result of the following arithmetic operations?:divide 45 by 3, subtract result from 40. divide 45 by 3, and then subtract both.\n choice:15 units\n choice:40 units\n choice:20 units\n choice:10 units\n choice:30 units\nA:",
+        "correctAnswer": "10 units",
+        "MbaseAnswer": "10 units",
+        "MbaseAnswerRaw": "10 units",
+        "judgement": true
+      },
+      {
+        "Index": 154,
+        "Input": "What is the result of the following arithmetic operations?:divide 32 by 4,\n choice:' 4 √ 2'\n choice:[' 2 √ 2'\n choice:' 5'\n choice:' 2 √ 5'\n choice:' 8']\nA:",
+        "correctAnswer": "' 8']",
+        "MbaseAnswer": "8",
+        "MbaseAnswerRaw": "8",
+        "judgement": true
+      },
+      {
+        "Index": 155,
+        "Input": "What is the result of the following arithmetic operations?:subtract 12 from 18,  multiply result by 2, divide result by 100, divide 600 by the result.\n choice:2800\n choice:7029\n choice:5000\n choice:2778\n choice:7000\nA:",
+        "correctAnswer": "5000",
+        "MbaseAnswer": "7000",
+        "MbaseAnswerRaw": "choice:7000",
+        "judgement": false
+      },
+      {
+        "Index": 156,
+        "Input": "What is the result of the following arithmetic operations?:add 1 to 3, add 1 to 6, and then multiply both.\n choice:18\n choice:9\n choice:28\n choice:12\n choice:363\nA:",
+        "correctAnswer": "28",
+        "MbaseAnswer": "28",
+        "MbaseAnswerRaw": "choice:28",
+        "judgement": true
+      },
+      {
+        "Index": 157,
+        "Input": "What is the result of the following arithmetic operations?:divide 100 by 10,\n choice:12.0\n choice:6.2\n choice:4.3\n choice:10.0\n choice:5.6\nA:",
+        "correctAnswer": "10.0",
+        "MbaseAnswer": "10.0",
+        "MbaseAnswerRaw": "10.0",
+        "judgement": true
+      },
+      {
+        "Index": 158,
+        "Input": "What is the result of the following arithmetic operations?:multiply 20 to 0.02, divide result by 10, multiply result by 100,\n choice:0.02 %\n choice:40 %\n choice:0.2 %\n choice:0.004 %\n choice:4 %\nA:",
+        "correctAnswer": "4 %",
+        "MbaseAnswer": "0.4 %",
+        "MbaseAnswerRaw": "0.4 %",
+        "judgement": false
+      },
+      {
+        "Index": 159,
+        "Input": "What is the result of the following arithmetic operations?:divide 80 by 100, divide 300 by the result.\n choice:420\n choice:600\n choice:480\n choice:375\n choice:500\nA:",
+        "correctAnswer": "375",
+        "MbaseAnswer": "600",
+        "MbaseAnswerRaw": "choice:600",
+        "judgement": false
+      },
+      {
+        "Index": 160,
+        "Input": "What is the result of the following arithmetic operations?:divide 9 by 12, multiply result by 6,\n choice:5\n choice:6\n choice:5.5\n choice:4.5\n choice:5.8\nA:",
+        "correctAnswer": "4.5",
+        "MbaseAnswer": "4.5",
+        "MbaseAnswerRaw": "4.5",
+        "judgement": true
+      },
+      {
+        "Index": 161,
+        "Input": "What is the result of the following arithmetic operations?:add 920 to 1480, add 55 to 65, and then divide both.\n choice:$ 20\n choice:$ 99\n choice:$ 27\n choice:$ 18\n choice:$ 38\nA:",
+        "correctAnswer": "$ 20",
+        "MbaseAnswer": "$ 20",
+        "MbaseAnswerRaw": "$ 20",
+        "judgement": true
+      },
+      {
+        "Index": 162,
+        "Input": "What is the result of the following arithmetic operations?:add 100 to 88, divide result by 100,\n choice:33 : 25\n choice:97 : 50\n choice:47 : 20\n choice:22 : 25\n choice:47 : 25\nA:",
+        "correctAnswer": "47 : 25",
+        "MbaseAnswer": "47 : 25",
+        "MbaseAnswerRaw": "choice:47 : 25",
+        "judgement": true
+      },
+      {
+        "Index": 163,
+        "Input": "What is the result of the following arithmetic operations?:subtract 750 from 1125,  divide result by 750, divide result by 5, multiply result by 100,\n choice:2\n choice:6\n choice:4\n choice:10\n choice:5\nA:",
+        "correctAnswer": "10",
+        "MbaseAnswer": "5",
+        "MbaseAnswerRaw": "choice:5",
+        "judgement": false
+      },
+      {
+        "Index": 164,
+        "Input": "What is the result of the following arithmetic operations?:multiply 4 to 12, add result to 58,\n choice:80\n choice:95\n choice:85\n choice:106\n choice:90\nA:",
+        "correctAnswer": "106",
+        "MbaseAnswer": "80",
+        "MbaseAnswerRaw": "choice:80",
+        "judgement": false
+      },
+      {
+        "Index": 165,
+        "Input": "What is the result of the following arithmetic operations?:multiply 5 to 100, add result to 100, divide result by 5, add 100 to the result.\n choice:156\n choice:none\n choice:220\n choice:130\n choice:240\nA:",
+        "correctAnswer": "220",
+        "MbaseAnswer": "220",
+        "MbaseAnswerRaw": "220",
+        "judgement": true
+      },
+      {
+        "Index": 166,
+        "Input": "What is the result of the following arithmetic operations?:divide 65 by 13, multiply result by 15,\n choice:52\n choice:78\n choice:65\n choice:43\n choice:75\nA:",
+        "correctAnswer": "75",
+        "MbaseAnswer": "78",
+        "MbaseAnswerRaw": "choice:78",
+        "judgement": false
+      },
+      {
+        "Index": 167,
+        "Input": "What is the result of the following arithmetic operations?:divide 60 by 10, multiply 3 by the result.\n choice:20\n choice:42\n choice:24\n choice:18\n choice:36\nA:",
+        "correctAnswer": "18",
+        "MbaseAnswer": "18",
+        "MbaseAnswerRaw": "choice:18",
+        "judgement": true
+      },
+      {
+        "Index": 168,
+        "Input": "What is the result of the following arithmetic operations?:divide 12880 by 230, divide result by 7, multiply result by 4,\n choice:28\n choice:58\n choice:32\n choice:18\n choice:56\nA:",
+        "correctAnswer": "32",
+        "MbaseAnswer": "56",
+        "MbaseAnswerRaw": "choice:56",
+        "judgement": false
+      },
+      {
+        "Index": 169,
+        "Input": "What is the result of the following arithmetic operations?:divide 15 by 3, add result to 1, add result to 1, add result to 15,\n choice:22\n choice:25\n choice:23\n choice:21\n choice:24\nA:",
+        "correctAnswer": "22",
+        "MbaseAnswer": "24",
+        "MbaseAnswerRaw": "choice:24",
+        "judgement": false
+      },
+      {
+        "Index": 170,
+        "Input": "What is the result of the following arithmetic operations?:multiply 3 to 35, multiply 6 to 20, and then divide both. multiply 112 by the result.\n choice:52 mtr\n choice:98 mtr .\n choice:70 mtr .\n choice:16 mtr .\n choice:78 mtr .\nA:",
+        "correctAnswer": "98 mtr .",
+        "MbaseAnswer": "70 mtr .",
+        "MbaseAnswerRaw": "70 mtr .",
+        "judgement": false
+      },
+      {
+        "Index": 171,
+        "Input": "What is the result of the following arithmetic operations?:divide 50 by 100, multiply result by 2,\n choice:1\n choice:4\n choice:2\n choice:0\n choice:3\nA:",
+        "correctAnswer": "1",
+        "MbaseAnswer": "1",
+        "MbaseAnswerRaw": "choice:1",
+        "judgement": true
+      },
+      {
+        "Index": 172,
+        "Input": "What is the result of the following arithmetic operations?:subtract 70 from 100, \n choice:30 %\n choice:60 %\n choice:40 %\n choice:20 %\n choice:50 %\nA:",
+        "correctAnswer": "30 %",
+        "MbaseAnswer": "30 %",
+        "MbaseAnswerRaw": "choice:30 %",
+        "judgement": true
+      },
+      {
+        "Index": 173,
+        "Input": "What is the result of the following arithmetic operations?:subtract 320 from 400,  divide result by 320, multiply result by 100,\n choice:2 %\n choice:83 %\n choice:25 %\n choice:17 %\n choice:65 %\nA:",
+        "correctAnswer": "25 %",
+        "MbaseAnswer": "25 %",
+        "MbaseAnswerRaw": "25 %",
+        "judgement": true
+      },
+      {
+        "Index": 174,
+        "Input": "What is the result of the following arithmetic operations?:divide 10 by 100, multiply 45 by the result.\n choice:4.50\n choice:6.75\n choice:5.00\n choice:3.00\n choice:5.50\nA:",
+        "correctAnswer": "4.50",
+        "MbaseAnswer": "4.50",
+        "MbaseAnswerRaw": "4.50",
+        "judgement": true
+      },
+      {
+        "Index": 175,
+        "Input": "What is the result of the following arithmetic operations?:multiply 9999 to 469157,\n choice:4586970843\n choice:none\n choice:4686970743\n choice:4586870843\n choice:4691100843\nA:",
+        "correctAnswer": "4691100843",
+        "MbaseAnswer": "4686970743",
+        "MbaseAnswerRaw": "choice:4686970743",
+        "judgement": false
+      },
+      {
+        "Index": 176,
+        "Input": "What is the result of the following arithmetic operations?:multiply 7 to 1, multiply 10 by the result.\n choice:60 min\n choice:90 min\n choice:70 min\n choice:50 min\n choice:80 min\nA:",
+        "correctAnswer": "70 min",
+        "MbaseAnswer": "70 min",
+        "MbaseAnswerRaw": "70 min",
+        "judgement": true
+      },
+      {
+        "Index": 177,
+        "Input": "What is the result of the following arithmetic operations?:add 60 to 20, divide result by 2,\n choice:23 kmph\n choice:79 kmph\n choice:34 kmph\n choice:14 kmph\n choice:40 kmph\nA:",
+        "correctAnswer": "40 kmph",
+        "MbaseAnswer": "40 kmph",
+        "MbaseAnswerRaw": "40 kmph",
+        "judgement": true
+      },
+      {
+        "Index": 178,
+        "Input": "What is the result of the following arithmetic operations?:add 1 to 1, multiply result by 0.90, add 2 to 1, and then divide both.\n choice:$ 0.20\n choice:$ 0.6\n choice:$ 0.30\n choice:$ 0.15\n choice:$ 0.40\nA:",
+        "correctAnswer": "$ 0.6",
+        "MbaseAnswer": "$ 0.30",
+        "MbaseAnswerRaw": "$ 0.30",
+        "judgement": false
+      },
+      {
+        "Index": 179,
+        "Input": "What is the result of the following arithmetic operations?:divide 5000 by 50,\n choice:102\n choice:106\n choice:103\n choice:100\n choice:105\nA:",
+        "correctAnswer": "100",
+        "MbaseAnswer": "100",
+        "MbaseAnswerRaw": "choice:100",
+        "judgement": true
+      },
+      {
+        "Index": 180,
+        "Input": "What is the result of the following arithmetic operations?:add 545 to 445, divide 1386 by the result. multiply result by 60,\n choice:82\n choice:88\n choice:84\n choice:80\n choice:86\nA:",
+        "correctAnswer": "84",
+        "MbaseAnswer": "84",
+        "MbaseAnswerRaw": "84",
+        "judgement": true
+      },
+      {
+        "Index": 181,
+        "Input": "What is the result of the following arithmetic operations?:multiply 3 to 6,\n choice:15\n choice:30\n choice:18\n choice:12\n choice:24\nA:",
+        "correctAnswer": "18",
+        "MbaseAnswer": "18",
+        "MbaseAnswerRaw": "choice:18",
+        "judgement": true
+      },
+      {
+        "Index": 182,
+        "Input": "What is the result of the following arithmetic operations?:multiply 3 to 8, multiply 2 to 6, and then add both. divide 216 by the result.\n choice:11\n choice:9\n choice:6\n choice:10\n choice:8\nA:",
+        "correctAnswer": "6",
+        "MbaseAnswer": "9",
+        "MbaseAnswerRaw": "choice:9",
+        "judgement": false
+      },
+      {
+        "Index": 183,
+        "Input": "What is the result of the following arithmetic operations?:multiply 42.75 to 8, divide result by 11.25,\n choice:25.6 kg\n choice:none of these\n choice:28 kg\n choice:22.8 kg\n choice:30.4 kg\nA:",
+        "correctAnswer": "30.4 kg",
+        "MbaseAnswer": "28 kg",
+        "MbaseAnswerRaw": "28 kg",
+        "judgement": false
+      },
+      {
+        "Index": 184,
+        "Input": "What is the result of the following arithmetic operations?:subtract 50 from 600,  divide result by 2,\n choice:' 275'\n choice:[' 550'\n choice:' 300'\n choice:' 250']\n choice:' 50'\nA:",
+        "correctAnswer": "' 275'",
+        "MbaseAnswer": "250",
+        "MbaseAnswerRaw": "250",
+        "judgement": false
+      },
+      {
+        "Index": 185,
+        "Input": "What is the result of the following arithmetic operations?:divide 10 by 100, multiply 340 by the result. add 340 to the result.\n choice:374\n choice:882\n choice:521\n choice:356\n choice:600\nA:",
+        "correctAnswer": "374",
+        "MbaseAnswer": "356",
+        "MbaseAnswerRaw": "356",
+        "judgement": false
+      },
+      {
+        "Index": 186,
+        "Input": "What is the result of the following arithmetic operations?:multiply 20 to 30, subtract 30 from 50,  and then divide both.\n choice:20\n choice:45\n choice:25\n choice:15\n choice:30\nA:",
+        "correctAnswer": "30",
+        "MbaseAnswer": "25",
+        "MbaseAnswerRaw": "choice:25",
+        "judgement": false
+      },
+      {
+        "Index": 187,
+        "Input": "What is the result of the following arithmetic operations?:subtract 1 from 5,  subtract 1 from result,\n choice:4\n choice:7\n choice:5\n choice:3\n choice:6\nA:",
+        "correctAnswer": "3",
+        "MbaseAnswer": "3",
+        "MbaseAnswerRaw": "choice:3",
+        "judgement": true
+      },
+      {
+        "Index": 188,
+        "Input": "What is the result of the following arithmetic operations?:add 3 to 21, multiply result by 2, multiply 4 to 3, and then subtract both.\n choice:14\n choice:43\n choice:25\n choice:12\n choice:36\nA:",
+        "correctAnswer": "36",
+        "MbaseAnswer": "25",
+        "MbaseAnswerRaw": "25",
+        "judgement": false
+      },
+      {
+        "Index": 189,
+        "Input": "What is the result of the following arithmetic operations?:multiply 2 to 12, multiply result by 2,\n choice:33\n choice:99\n choice:44\n choice:22\n choice:48\nA:",
+        "correctAnswer": "48",
+        "MbaseAnswer": "48",
+        "MbaseAnswerRaw": "choice:48",
+        "judgement": true
+      },
+      {
+        "Index": 190,
+        "Input": "What is the result of the following arithmetic operations?:multiply 8 to 2, subtract 6 from 8,  and then divide both. multiply result by 6,\n choice:$ 24\n choice:$ 48\n choice:$ 30\n choice:$ 22\n choice:$ 36\nA:",
+        "correctAnswer": "$ 48",
+        "MbaseAnswer": "$ 24",
+        "MbaseAnswerRaw": "$ 24",
+        "judgement": false
+      },
+      {
+        "Index": 191,
+        "Input": "What is the result of the following arithmetic operations?:add 142 to 110, divide result by 4,\n choice:59\n choice:63\n choice:60\n choice:58\n choice:62\nA:",
+        "correctAnswer": "63",
+        "MbaseAnswer": "63",
+        "MbaseAnswerRaw": "choice:63",
+        "judgement": true
+      },
+      {
+        "Index": 192,
+        "Input": "What is the result of the following arithmetic operations?:multiply 15 to 2, subtract 1 from result,\n choice:21\n choice:32\n choice:22\n choice:11\n choice:29\nA:",
+        "correctAnswer": "29",
+        "MbaseAnswer": "29",
+        "MbaseAnswerRaw": "choice:29",
+        "judgement": true
+      },
+      {
+        "Index": 193,
+        "Input": "What is the result of the following arithmetic operations?:divide 0.50 by 100, divide 0.12 by the result.\n choice:18\n choice:24\n choice:20\n choice:16\n choice:22\nA:",
+        "correctAnswer": "24",
+        "MbaseAnswer": "24",
+        "MbaseAnswerRaw": "choice:24",
+        "judgement": true
+      },
+      {
+        "Index": 194,
+        "Input": "What is the result of the following arithmetic operations?:add 4 to 1, divide 100 by the result. divide result by 4,\n choice:4 %\n choice:7 %\n choice:5 %\n choice:3 %\n choice:6 %\nA:",
+        "correctAnswer": "5 %",
+        "MbaseAnswer": "5 %",
+        "MbaseAnswerRaw": "5 %",
+        "judgement": true
+      },
+      {
+        "Index": 195,
+        "Input": "What is the result of the following arithmetic operations?:multiply 15 to 3, subtract result from 85. add result to 3,\n choice:39\n choice:47\n choice:42\n choice:37\n choice:43\nA:",
+        "correctAnswer": "43",
+        "MbaseAnswer": "42",
+        "MbaseAnswerRaw": "choice:42",
+        "judgement": false
+      },
+      {
+        "Index": 196,
+        "Input": "What is the result of the following arithmetic operations?:divide 1 by 0.08,\n choice:12.5\n choice:none of these\n choice:2.5\n choice:. 25\n choice:25.5\nA:",
+        "correctAnswer": "12.5",
+        "MbaseAnswer": "12.5",
+        "MbaseAnswerRaw": "12.5",
+        "judgement": true
+      },
+      {
+        "Index": 197,
+        "Input": "What is the result of the following arithmetic operations?:multiply 10 to 4,\n choice:000\n choice:100\n choice:400\n choice:158\n choice:40\n choice:24\n choice:7\nA:",
+        "correctAnswer": "40",
+        "MbaseAnswer": "40",
+        "MbaseAnswerRaw": "choice:40",
+        "judgement": true
+      },
+      {
+        "Index": 198,
+        "Input": "What is the result of the following arithmetic operations?:add 4 to 3, multiply result by 5,\n choice:35 minutes\n choice:55 minutes\n choice:40 minutes\n choice:25 minutes\n choice:45 minutes\nA:",
+        "correctAnswer": "35 minutes",
+        "MbaseAnswer": "35 minutes",
+        "MbaseAnswerRaw": "35 minutes",
+        "judgement": true
+      },
+      {
+        "Index": 199,
+        "Input": "What is the result of the following arithmetic operations?:multiply 15 to 40, divide result by 25,\n choice:25\n choice:28\n choice:26\n choice:24\n choice:27\nA:",
+        "correctAnswer": "24",
+        "MbaseAnswer": "24",
+        "MbaseAnswerRaw": "24",
+        "judgement": true
+      }
+    ]
+  }
+}
